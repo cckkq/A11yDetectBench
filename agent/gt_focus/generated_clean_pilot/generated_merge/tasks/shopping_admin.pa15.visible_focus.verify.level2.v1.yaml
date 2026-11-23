@@ -1,0 +1,38 @@
+task_id: shopping_admin.pa15.visible_focus.verify.level2.v1
+instance_id: shopping_admin.pa15.visible_focus
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_focus/generated_clean_pilot/generated_merge/evaluate-rules/shopping_admin.pa15.visible_focus.verify.level2.v1.yaml
+difficulty: level_2_clause_given_location_hidden
+issue_domain: focus
+issue_family: visible_focus
+wcag_target: WCAG 2.4.7 Focus Visible
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
+wcag_clause_text: >-
+  Any keyboard operable user interface has a mode of operation where the keyboard focus indicator
+  is visible.
+ai_web:
+  requirement_key: visible-focus
+  requirement_name: Visible focus
+  guidance_link_key: WCAG_2_4_7
+  source_files:
+  - >-
+    accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/visible-focus.tsx
+  - accessibility-insights-web-main/src/content/test/focus/visible-focus.tsx
+  - accessibility-insights-web-main/src/content/guideline-metadata.ts
+  requirement_text: Components must provide a visible indication when they have the input
+    focus.
+modality_policy: keyboard_primary_pointer_confirmation
+start_url: http://localhost:7780/admin/catalog_rule/promo_catalog/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: keyboard-focusable components on the Catalog Price Rules page
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  issues:
+  - selector: verified CSS selector for the reported focus target, or empty string
+    target: natural-language description of the reported focus target
+    issue_type: visible_focus
+    observed_behavior: concise description of the observed focus behavior
+    evidence: concrete keyboard path, rendered state, DOM, or accessibility facts supporting
+      the issue

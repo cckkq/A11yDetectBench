@@ -1,0 +1,59 @@
+task_id: gitlab.gl82.datepicker_month_switch_not_keyboard_reachable.verify.v1
+instance_id: gitlab.gl82.datepicker_month_switch_not_keyboard_reachable
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL82
+page:
+  site: gitlab
+  page_name: Value Stream Analytics
+  start_url: >-
+    http://localhost:8023/byteblaze/dotfiles/-/value_stream_analytics?created_after=2026-02-10&created_before=2026-03-11&stage_id=issue&sort=end_event&direction=desc&page=1
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 2.1.1 Keyboard
+  - keyboard.keyboard_nonreachable.datepicker_month_switch_not_keyboard_reachable
+  target:
+    selector: .pika-single:not(.is-hidden) .pika-prev, .pika-single:not(.is-hidden) .pika-next
+    description: the previous and next month buttons in the opened Value Stream date-range
+      datepicker
+    coverage_policy: representative_group
+  criterion:
+    issue_family: keyboard_nonreachable
+    wcag_target: WCAG 2.1.1 Keyboard
+    assessment_requirement: 1.1 Keyboard navigation
+    ai_web:
+      requirement_key: keyboard-navigation
+      requirement_name: Keyboard navigation
+      guidance_link_key: WCAG_2_1_1
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/keyboard-navigation.tsx
+      - accessibility-insights-web-main/src/content/test/keyboard/keyboard-navigation.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: Users must be able to navigate to all interactive interface components
+        using a keyboard.
+    wcag:
+      number: 2.1.1
+      name: Keyboard
+      link_name: WCAG 2.1.1
+      url: https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html
+      criterion_text: >-
+        All functionality of the content is operable through a keyboard interface without
+        requiring specific timings for individual keystrokes, except where the underlying
+        function requires input that depends on the path of the user's movement and not just
+        the endpoints.
+  evidence_rule: >-
+    The target (the previous and next month buttons in the opened Value Stream date-range
+    datepicker) is visible and pointer-operable or part of an active widget, but expected
+    keyboard navigation cannot reach or complete operation of that same target. Reporting
+    a different keyboard issue on the page does not satisfy this rule.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated keyboard issues does not count for this task.

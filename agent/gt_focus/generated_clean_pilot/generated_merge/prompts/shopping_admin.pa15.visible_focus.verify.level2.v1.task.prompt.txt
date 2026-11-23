@@ -1,0 +1,9 @@
+Task: Inspect keyboard-focusable components on the Catalog Price Rules page for WCAG 2.4.7 Focus Visible.
+
+WCAG criterion: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.
+
+Report a WCAG 2.4.7 focus-visible issue for each component where the component receives keyboard focus or becomes the keyboard-current item, but no user-perceivable focus indicator is visible in the rendered page state.
+
+For visible-focus checks, first show that real keyboard navigation placed focus on the target. Mouse clicks, JavaScript `.focus()`, and browser-use highlights or overlays do not prove focus or visible focus. Judge visible focus from the rendered page: the focused target must have a visible indication that lets a keyboard user tell where focus is. A selected or current style that was already visible, or a CSS change that is too subtle to see clearly, is not enough. Arrow keys are valid inside menus, tabs, listboxes, and similar widgets; if DOM focus stays on a container, identify the active item with aria-activedescendant or an equivalent current-item state.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

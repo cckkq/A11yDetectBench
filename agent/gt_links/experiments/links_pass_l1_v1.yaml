@@ -1,0 +1,69 @@
+experiment_id: links_pass_l1_v1
+description: Links PASS L1 clean counterfactual set, repeats=3.
+
+defaults:
+  task_root: agent/gt_links/generated_clean_pilot/generated_pass/tasks
+  levels:
+    - verify.v1
+  max_steps: 25
+  repeats: 3
+
+sites:
+  gitlab:
+    - task_base: gitlab.gl01.lf.issues_shortcut_anchor_navigates_to_issues
+    - task_base: gitlab.gl01.lf.todos_shortcut_anchor_navigates_to_todos
+    - task_base: gitlab.gl02.lp.profile_follow_links_have_specific_purpose
+    - task_base: gitlab.gl02.lp.project_title_links_have_specific_purpose
+    - task_base: gitlab.gl03.lp.profile_follow_links_have_specific_purpose
+    - task_base: gitlab.gl06.lp.project_title_links_have_specific_purpose
+    - task_base: gitlab.gl11.lp.commit_email_learn_more_link_has_context
+    - task_base: gitlab.gl24.lp.help_topic_links_have_specific_purpose
+    - task_base: gitlab.gl50.lp.activity_push_events_filter_has_specific_purpose
+    - task_base: gitlab.gl95.lf.issues_shortcut_anchor_navigates_to_issues
+    - task_base: gitlab.gl95.lf.todos_shortcut_anchor_navigates_to_todos
+    - task_base: gitlab.gl99.lp.snippet_cancel_link_has_form_context
+
+  reddit:
+    - task_base: reddit.rd06.lf.comment_author_profile_link_navigates_to_profile
+    - task_base: reddit.rd10.lp.submission_title_links_have_specific_purpose
+    - task_base: reddit.rd14.lp.submission_title_links_have_specific_purpose
+    - task_base: reddit.rd15.lf.comment_author_profile_link_navigates_to_profile
+    - task_base: reddit.rd15.lp.comment_author_profile_links_have_specific_purpose
+    - task_base: reddit.rd15.lp.comment_author_profile_links_have_specific_purpose_for_parent
+    - task_base: reddit.rd15.lp.comment_author_profile_links_have_specific_purpose_for_reply
+    - task_base: reddit.rd17.lp.submission_author_profile_links_have_specific_purpose
+    - task_base: reddit.rd17.lp.submission_title_links_have_specific_purpose
+    - task_base: reddit.rd18.lp.comment_author_profile_links_have_specific_purpose_for_parent
+    - task_base: reddit.rd18.lp.comment_author_profile_links_have_specific_purpose_for_permalink
+    - task_base: reddit.rd18.lp.comment_author_profile_links_have_specific_purpose_for_reply
+    - task_base: reddit.rd20.lp.comment_submission_title_link_has_specific_purpose
+
+  shopping:
+    - task_base: shopping.p01.lp.recently_ordered_product_links_have_specific_purpose_for_reorder
+    - task_base: shopping.p01.lp.recently_ordered_product_links_have_specific_purpose_for_view_order
+    - task_base: shopping.p02.lp.recently_ordered_product_links_have_specific_purpose_for_reorder
+    - task_base: shopping.p02.lp.recently_ordered_product_links_have_specific_purpose_for_view_order
+    - task_base: shopping.p03.lp.recently_ordered_product_links_have_specific_purpose
+    - task_base: shopping.p10.lf.product_detail_add_to_wishlist_navigates_to_wishlist
+    - task_base: shopping.p19.lf.compare_page_add_to_wishlist_anchor_for_print_navigates_to_wishlist
+    - task_base: shopping.p19.lf.compare_page_add_to_wishlist_anchor_navigates_to_wishlist
+    - task_base: shopping.p20.lf.compare_page_add_to_wishlist_anchor_for_print_navigates_to_wishlist
+    - task_base: shopping.p20.lf.compare_page_add_to_wishlist_anchor_navigates_to_wishlist
+    - task_base: shopping.p21.lp.recently_ordered_product_links_have_specific_purpose
+    - task_base: shopping.p22.lf.product_detail_add_to_wishlist_navigates_to_wishlist
+    - task_base: shopping.p29.lf.home_product_card_add_to_wishlist_navigates_to_wishlist
+
+  shopping_admin:
+    - task_base: shopping_admin.pa01.lp.dashboard_chart_disabled_here_link_has_sentence_context
+    - task_base: shopping_admin.pa02.lp.left_nav_dashboard_link_has_specific_purpose_for_read_details
+    - task_base: shopping_admin.pa02.lp.left_nav_dashboard_link_has_specific_purpose_for_remove
+    - task_base: shopping_admin.pa03.lf.left_nav_partners_extensions_link_navigates_to_marketplace
+    - task_base: shopping_admin.pa04.lp.left_nav_dashboard_link_has_specific_purpose
+    - task_base: shopping_admin.pa40.lp.left_nav_dashboard_link_has_specific_purpose
+    - task_base: shopping_admin.pa46.lp.coupons_report_statistics_link_has_specific_purpose
+    - task_base: shopping_admin.pa61.lf.left_nav_dashboard_link_navigates_to_dashboard
+    - task_base: shopping_admin.pa62.lp.left_nav_dashboard_link_has_specific_purpose
+    - task_base: shopping_admin.pa75.lp.left_nav_dashboard_link_has_specific_purpose
+    - task_base: shopping_admin.pa76.lf.left_nav_partners_extensions_link_navigates_to_marketplace
+    - task_base: shopping_admin.pa82.lp.left_nav_dashboard_link_has_specific_purpose_for_read_details
+    - task_base: shopping_admin.pa82.lp.left_nav_dashboard_link_has_specific_purpose_for_remove

@@ -1,0 +1,52 @@
+task_id: gitlab.gl96.visible_focus.verify.level2.v1
+instance_id: gitlab.gl96.visible_focus
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL96
+  review_status: current_clean_inventory
+page:
+  site: gitlab
+  page_name: Explore Topics
+  start_url: http://localhost:8023/explore/projects/topics
+scope:
+  issue_family: visible_focus
+  wcag_target: WCAG 2.4.7 Focus Visible
+  assessment_requirement: F.1 Visible Focus
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: gitlab.gl96.f21t4.explore_tab_controls_no_visible_focus
+    target:
+      selector: a.nav-link.gl-tab-nav-item[href="/explore/projects/topics"]
+      description: the active Topics tab control on the GitLab Explore Topics page
+      coverage_policy: single
+    criterion:
+      issue_family: visible_focus
+      wcag_target: WCAG 2.4.7 Focus Visible
+      assessment_requirement: F.1 Visible Focus
+      ai_web:
+        requirement_key: visible-focus
+        requirement_name: Visible focus
+        guidance_link_key: WCAG_2_4_7
+        source_files:
+        - >-
+          accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/visible-focus.tsx
+        - accessibility-insights-web-main/src/content/test/focus/visible-focus.tsx
+        - accessibility-insights-web-main/src/content/guideline-metadata.ts
+        requirement_text: Components must provide a visible indication when they have the
+          input focus.
+      wcag:
+        number: 2.4.7
+        name: Focus Visible
+        link_name: WCAG 2.4.7
+        url: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
+        criterion_text: >-
+          Any keyboard operable user interface has a mode of operation where the keyboard
+          focus indicator is visible.
+    evidence_rule: >-
+      The Explore Topics page Topics tab receives keyboard focus, but no distinct user-perceivable
+      focus indicator is visible beyond the tab's existing selected/current underline state.
+      Mouse clicks, JavaScript focus, browser-use overlays, and imperceptible computed-style
+      differences do not count as focus evidence.

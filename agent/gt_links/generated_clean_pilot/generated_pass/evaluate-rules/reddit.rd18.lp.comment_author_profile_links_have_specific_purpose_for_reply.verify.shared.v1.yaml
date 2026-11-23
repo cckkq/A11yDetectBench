@@ -1,0 +1,36 @@
+task_id: reddit.rd18.lp.comment_author_profile_links_have_specific_purpose_for_reply.verify.v1
+instance_id: reddit.rd18.lp.comment_author_profile_links_have_specific_purpose_for_reply
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: RD18
+  matched_positive: reddit.rd18.lp.comment_reply_without_comment_context
+page:
+  site: reddit
+  page_name: Comment Thread
+  start_url: >-
+    http://localhost:9999/f/relationship_advice/25599/update-my-f23-boyfriend-m33-just-left-me-in-europe-told-me
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  target:
+    selector: article.comment header a[href^='/user/']:not([href='/user/%5Bdeleted%5D'])
+    description: the visible non-deleted comment author profile links in comment headers
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: Link Purpose (In Context)
+      url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  evidence_rule: >-
+    The matched links have specific visible author names and hrefs pointing to the corresponding
+    `/user/<name>` profile URLs. The link text identifies the target profile, so the Link
+    Purpose issue is not present for this target.

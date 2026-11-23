@@ -1,0 +1,44 @@
+task_id: reddit.ex01.e2.generic_rejection_without_guidance.verify.v1
+instance_id: reddit.ex01.e2.generic_rejection_without_guidance
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: EX01
+page:
+  site: reddit
+  page_name: Login
+  start_url: http://localhost:9999/login
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 3.3.3 Error Suggestion
+  - error.e2.generic_rejection_without_guidance
+  target:
+    selector: input#login-username[name="_username"], input#login-password[name="_password"]
+    description: the username and password inputs in the Reddit login form
+    coverage_policy: representative_group
+  criterion:
+    issue_family: error_suggestion
+    wcag_target: WCAG 3.3.3 Error Suggestion
+    assessment_requirement: E.2 Error Suggestion
+    wcag:
+      number: 3.3.3
+      name: Error Suggestion
+      link_name: WCAG 3.3.3
+      url: https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html
+      criterion_text: >-
+        If an input error is automatically detected and suggestions for correction are known,
+        then the suggestions are provided to the user, unless it would jeopardize the security
+        or purpose of the content.
+  evidence_rule: >-
+    The page detects the submitted login credentials as invalid but does not provide an actionable
+    correction direction for the username/password path, such as checking the entered credentials,
+    retrying the relevant field, or explaining which credential input needs attention.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

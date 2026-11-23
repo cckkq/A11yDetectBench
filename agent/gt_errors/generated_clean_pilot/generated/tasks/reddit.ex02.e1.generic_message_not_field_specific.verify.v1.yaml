@@ -1,0 +1,30 @@
+task_id: reddit.ex02.e1.generic_message_not_field_specific.verify.v1
+instance_id: reddit.ex02.e1.generic_message_not_field_specific
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_errors/generated_clean_pilot/generated/evaluate-rules/reddit.ex02.e1.generic_message_not_field_specific.verify.shared.v1.yaml
+difficulty: level_1_direct_verification
+issue_domain: error
+issue_family: error_identification
+wcag_target: WCAG 3.3.1 Error Identification
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+wcag_clause_text: >-
+  If an input error is automatically detected, the item that is in error is identified and
+  the error is described to the user in text.
+modality_policy: unrestricted_detection
+start_url: http://localhost:9999/registration
+auth_state_file: null
+target_description: the password and repeat password inputs in the Reddit registration form
+probe: >-
+  Complete the other required registration fields, enter different valid-length values in
+  the target password fields, and submit the registration form.
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  selector: verified CSS selector for the field/control path where the issue belongs
+  target: natural-language description of the field/control path where the issue belongs
+  issue_type: error_identification
+  observed_behavior: concise description of the observed error behavior
+  evidence: concrete DOM, interaction, text, or accessibility facts supporting the verdict
+target_selector: >-
+  input#user_password_first[name="user[password][first]"], input#user_password_second[name="user[password][second]"]

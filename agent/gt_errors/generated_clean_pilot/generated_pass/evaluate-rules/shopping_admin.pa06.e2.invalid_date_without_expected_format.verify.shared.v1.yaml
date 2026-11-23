@@ -1,0 +1,46 @@
+task_id: shopping_admin.pa06.e2.invalid_date_without_expected_format.verify.v1
+instance_id: shopping_admin.pa06.e2.invalid_date_without_expected_format
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA06
+  matched_positive: shopping_admin.pa06.e2.invalid_date_without_expected_format
+page:
+  site: shopping_admin
+  page_name: Shipments
+  start_url: http://localhost:7780/admin/sales/shipment/
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 3.3.3 Error Suggestion
+  - error.e2.invalid_date_without_expected_format
+  target:
+    selector: input[name="created_at[from]"], input[name="created_at[to]"]
+    description: the Ship Date From and To filter inputs in the Magento Admin Shipments grid
+    coverage_policy: representative_group
+  criterion:
+    issue_family: error_suggestion
+    wcag_target: WCAG 3.3.3 Error Suggestion
+    assessment_requirement: E.2 Error Suggestion
+    wcag:
+      number: 3.3.3
+      name: Error Suggestion
+      link_name: WCAG 3.3.3
+      url: https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html
+      criterion_text: >-
+        If an input error is automatically detected and suggestions for correction are known,
+        then the suggestions are provided to the user, unless it would jeopardize the security
+        or purpose of the content.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target/probe: the runtime patch is expected
+    to remediate the same target path so any automatically detected input error provides an
+    actionable correction suggestion. A reported E.2 issue on this matched target is a false
+    alarm for this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported issue on this clean target is a false alarm for this task.
+- Reporting unrelated issues does not count for this task.

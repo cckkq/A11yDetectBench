@@ -1,0 +1,248 @@
+diff --git a/browser_use/llm/azure/chat.py b/browser_use/llm/azure/chat.py
+index 21b14aab..b8a23c00 100644
+--- a/browser_use/llm/azure/chat.py
++++ b/browser_use/llm/azure/chat.py
+@@ -11,6 +11,11 @@ from pydantic import BaseModel
+ 
+ from browser_use.llm.exceptions import ModelProviderError, ModelRateLimitError
+ from browser_use.llm.messages import BaseMessage
++from browser_use.llm.openai.chat import (
++	_dump_structured_output_parse_failure,
++	_dump_structured_output_salvage,
++	_extract_first_json_block,
++)
+ from browser_use.llm.openai.like import ChatOpenAILike
+ from browser_use.llm.openai.responses_serializer import ResponsesAPIMessageSerializer
+ from browser_use.llm.schema import SchemaOptimizer
+@@ -236,7 +241,37 @@ class ChatAzureOpenAI(ChatOpenAILike):
+ 					)
+ 
+ 				usage = self._get_usage_from_responses(response)
+-				parsed = output_format.model_validate_json(response.output_text)
++				try:
++					parsed = output_format.model_validate_json(response.output_text)
++				except Exception as exc:
++					salvaged = False
++					if self.salvage_multi_json:
++						first = _extract_first_json_block(response.output_text)
++						if first is not None and first != response.output_text:
++							try:
++								parsed = output_format.model_validate_json(first)
++								salvaged = True
++								_dump_structured_output_salvage(
++									response.output_text,
++									first,
++									provider=self.provider,
++									model=self.name,
++									output_format_name=output_format.__name__,
++									response_id=getattr(response, 'id', None),
++								)
++							except Exception:
++								pass
++					if not salvaged:
++						_dump_structured_output_parse_failure(
++							response.output_text,
++							provider=self.provider,
++							model=self.name,
++							output_format_name=output_format.__name__,
++							error=exc,
++							stop_reason=response.status if response.status else None,
++							response_id=getattr(response, 'id', None),
++						)
++						raise
+ 
+ 				return ChatInvokeCompletion(
+ 					completion=parsed,
+diff --git a/browser_use/llm/openai/chat.py b/browser_use/llm/openai/chat.py
+index 390df689..3e093f4a 100644
+--- a/browser_use/llm/openai/chat.py
++++ b/browser_use/llm/openai/chat.py
+@@ -1,6 +1,11 @@
+ from collections.abc import Iterable, Mapping
+ from dataclasses import dataclass, field
++from datetime import datetime, timezone
++import json
++import os
++from pathlib import Path
+ from typing import Any, Literal, TypeVar, overload
++from uuid import uuid4
+ 
+ import httpx
+ from openai import APIConnectionError, APIStatusError, AsyncOpenAI, RateLimitError
+@@ -21,6 +26,129 @@ from browser_use.llm.views import ChatInvokeCompletion, ChatInvokeUsage
+ T = TypeVar('T', bound=BaseModel)
+ 
+ 
++def _dump_structured_output_parse_failure(
++	raw_text: str,
++	*,
++	provider: str,
++	model: str,
++	output_format_name: str,
++	error: Exception,
++	stop_reason: str | None,
++	response_id: str | None,
++) -> None:
++	debug_dir = os.getenv('BROWSER_USE_STRUCTURED_DEBUG_DIR')
++	if not debug_dir:
++		return
++
++	try:
++		root = Path(debug_dir)
++		root.mkdir(parents=True, exist_ok=True)
++		payload = {
++			'timestamp': datetime.now(timezone.utc).isoformat(),
++			'provider': provider,
++			'model': model,
++			'output_format': output_format_name,
++			'stop_reason': stop_reason,
++			'response_id': response_id,
++			'error_type': type(error).__name__,
++			'error_message': str(error),
++			'raw_text': raw_text,
++		}
++		path = root / f'structured_parse_failure_{datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S_%f")}_{uuid4().hex[:8]}.json'
++		with path.open('w', encoding='utf-8') as handle:
++			json.dump(payload, handle, ensure_ascii=False, indent=2)
++			handle.write('\n')
++	except Exception:
++		# Debug capture must never mask the original provider/parsing error.
++		return
++
++
++def _extract_first_json_block(text: str) -> str | None:
++	"""Scan text for the first top-level balanced {...} JSON object.
++
++	Returns the substring, or None if no complete object found. Used by the
++	multi-JSON salvage path to recover when the model emits multiple
++	concatenated JSON objects in a single completion.
++	"""
++	in_string = False
++	escape = False
++	depth = 0
++	start = -1
++	for i, ch in enumerate(text):
++		if start == -1:
++			if ch == '{':
++				start = i
++				depth = 1
++				in_string = False
++				escape = False
++			continue
++		if in_string:
++			if escape:
++				escape = False
++			elif ch == '\\':
++				escape = True
++			elif ch == '"':
++				in_string = False
++		else:
++			if ch == '"':
++				in_string = True
++			elif ch == '{':
++				depth += 1
++			elif ch == '}':
++				depth -= 1
++				if depth == 0:
++					return text[start:i + 1]
++	return None
++
++
++def _dump_structured_output_salvage(
++	raw_text: str,
++	salvaged_block: str,
++	*,
++	provider: str,
++	model: str,
++	output_format_name: str,
++	response_id: str | None,
++) -> None:
++	"""Record a multi-JSON salvage event. Uses the same
++	BROWSER_USE_STRUCTURED_DEBUG_DIR env var but writes into a
++	`structured_parse_salvaged/` subdir so it does not mix with genuine
++	parse failures."""
++	debug_dir = os.getenv('BROWSER_USE_STRUCTURED_DEBUG_DIR')
++	if not debug_dir:
++		return
++	try:
++		root = Path(debug_dir) / 'structured_parse_salvaged'
++		root.mkdir(parents=True, exist_ok=True)
++		# Recover every additional top-level block for archival only.
++		remaining = raw_text[len(salvaged_block):].lstrip()
++		dropped_blocks: list[str] = []
++		while remaining:
++			nxt = _extract_first_json_block(remaining)
++			if nxt is None:
++				break
++			dropped_blocks.append(nxt)
++			remaining = remaining[len(nxt):].lstrip()
++		payload = {
++			'timestamp': datetime.now(timezone.utc).isoformat(),
++			'provider': provider,
++			'model': model,
++			'output_format': output_format_name,
++			'response_id': response_id,
++			'raw_text': raw_text,
++			'salvaged_block': salvaged_block,
++			'total_blocks': 1 + len(dropped_blocks),
++			'dropped_blocks_count': len(dropped_blocks),
++			'dropped_blocks': dropped_blocks,
++		}
++		path = root / f'salvage_{datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S_%f")}_{uuid4().hex[:8]}.json'
++		with path.open('w', encoding='utf-8') as handle:
++			json.dump(payload, handle, ensure_ascii=False, indent=2)
++			handle.write('\n')
++	except Exception:
++		return
++
++
+ @dataclass
+ class ChatOpenAI(BaseChatModel):
+ 	"""
+@@ -48,6 +176,7 @@ class ChatOpenAI(BaseChatModel):
+ 	remove_defaults_from_schema: bool = (
+ 		False  # If True, remove default values from JSON schema (for compatibility with some providers)
+ 	)
++	salvage_multi_json: bool = False  # If True, recover from `trailing characters` parse failure by taking the first top-level JSON block. Off by default.
+ 
+ 	# Client initialization parameters
+ 	api_key: str | None = None
+@@ -281,7 +410,37 @@ class ChatOpenAI(BaseChatModel):
+ 
+ 				usage = self._get_usage(response)
+ 
+-				parsed = output_format.model_validate_json(choice.message.content)
++				try:
++					parsed = output_format.model_validate_json(choice.message.content)
++				except Exception as exc:
++					salvaged = False
++					if self.salvage_multi_json:
++						first = _extract_first_json_block(choice.message.content)
++						if first is not None and first != choice.message.content:
++							try:
++								parsed = output_format.model_validate_json(first)
++								salvaged = True
++								_dump_structured_output_salvage(
++									choice.message.content,
++									first,
++									provider=self.provider,
++									model=self.name,
++									output_format_name=output_format.__name__,
++									response_id=getattr(response, 'id', None),
++								)
++							except Exception:
++								pass
++					if not salvaged:
++						_dump_structured_output_parse_failure(
++							choice.message.content,
++							provider=self.provider,
++							model=self.name,
++							output_format_name=output_format.__name__,
++							error=exc,
++							stop_reason=choice.finish_reason,
++							response_id=getattr(response, 'id', None),
++						)
++						raise
+ 
+ 				return ChatInvokeCompletion(
+ 					completion=parsed,

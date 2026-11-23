@@ -1,0 +1,56 @@
+task_id: shopping_admin.pa61.lf.order_status_unassign_data_post_anchor.verify.level2.v1
+instance_id: shopping_admin.pa61.lf.order_status_unassign_data_post_anchor
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA61
+page:
+  site: shopping_admin
+  page_name: Order Status
+  start_url: http://localhost:7780/admin/sales/order_status/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 4.1.2 Name, Role, Value
+  - links.link_function.shopping_admin.order_status_unassign_data_post_anchor
+  target:
+    selector: a[href="#"][data-post*="unassign"]
+    description: the Unassign command anchors in the order status grid
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Links must navigate to another page, location, or resource. Controls that perform
+        an action or change local state must not be exposed as ordinary links.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components, the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  evidence_rule: >-
+    The matched anchors are exposed as links with `href="#"`, but their `data-post` payload
+    submits `/admin/sales/order_status/unassign/` commands for status/state pairs. They do
+    not navigate to link content and do not expose a button or command role.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

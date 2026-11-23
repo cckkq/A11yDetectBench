@@ -1,0 +1,36 @@
+task_id: >-
+  shopping_admin.pa02.lp.left_nav_dashboard_link_has_specific_purpose_for_read_details.verify.v1
+instance_id: shopping_admin.pa02.lp.left_nav_dashboard_link_has_specific_purpose_for_read_details
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA02
+  matched_positive: shopping_admin.pa02.lp.notification_read_details_without_row_context
+page:
+  site: shopping_admin
+  page_name: Notifications
+  start_url: http://localhost:7780/admin/admin/notification/index/
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  target:
+    selector: '#nav a[href*=''/admin/admin/dashboard/'']'
+    description: the Dashboard link in the admin left navigation
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: Link Purpose (In Context)
+      url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  evidence_rule: >-
+    The matched link has visible text `Dashboard` and an href pointing to the admin dashboard.
+    The link text identifies the destination, so the Link Purpose issue is not present for
+    this target.

@@ -1,0 +1,57 @@
+task_id: shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift.verify.v1
+instance_id: shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA10
+  matched_positive: shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift
+page:
+  site: shopping_admin
+  page_name: Products
+  start_url: http://localhost:7780/admin/catalog/product/
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 2.4.3 Focus Order
+  - focus.revealing_content.split_button_revealed_menu_no_focus_shift
+  target:
+    selector: .page-actions button.action-toggle.primary.add
+    description: the Add Product split-button trigger and revealed product-type menu
+    coverage_policy: single
+  criterion:
+    issue_family: revealing_content
+    wcag_target: WCAG 2.4.3 Focus Order
+    assessment_requirement: F.5 Revealing Content
+    ai_web:
+      requirement_key: revealing-content
+      requirement_name: Revealing content
+      guidance_link_key: WCAG_2_4_3
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/revealing-content.tsx
+      - accessibility-insights-web-main/src/content/test/focus/revealing-content.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Activating a component that reveals hidden content must move input focus into the
+        revealed content.
+    wcag:
+      number: 2.4.3
+      name: Focus Order
+      link_name: WCAG 2.4.3
+      url: https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html
+      criterion_text: >-
+        If a Web page can be navigated sequentially and the navigation sequences affect meaning
+        or operation, focusable components receive focus in an order that preserves meaning
+        and operability.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target: the runtime patch is expected to keep
+    the same keyboard activation path but move focus into the revealed content. A reported
+    revealing-content focus issue on this matched target is a false alarm for this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported focus issue on this clean target is a false alarm for this task.
+- Reporting unrelated focus issues does not count for this task.

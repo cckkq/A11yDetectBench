@@ -1,0 +1,55 @@
+task_id: shopping.p03.lp.generic_view_all_without_programmatic_context.verify.v1
+instance_id: shopping.p03.lp.generic_view_all_without_programmatic_context
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: P03
+page:
+  site: shopping
+  page_name: Downloadable Products
+  start_url: http://localhost:7770/downloadable/customer/products/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 2.4.4 Link Purpose (In Context)
+  - links.link_purpose.shopping.generic_view_all_without_programmatic_context
+  target:
+    selector: .block-reorder a.action.view
+    description: the View All anchor in the Recently Ordered block
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  evidence_rule: >-
+    The matched link is named only View All. The section title is visual block context, but
+    it is not programmatically associated with the link through aria-labelledby, aria-describedby,
+    table headers, or list-item context that identifies the destination collection.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

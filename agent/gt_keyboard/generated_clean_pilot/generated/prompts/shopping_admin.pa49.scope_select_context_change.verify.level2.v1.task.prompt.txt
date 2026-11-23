@@ -1,0 +1,9 @@
+Task: Inspect controls that change value or selection on this page for Accessibility Insights On input.
+
+WCAG reference: WCAG 3.2.2 On Input - Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.
+
+Report a WCAG 3.2.2 on-input context-change issue for each target where changing the target control value or selection automatically causes a change of context without prior user advice and without a separate confirmation step.
+
+Verify keyboard behavior by navigating to and operating the same target or control through observed Tab, Shift+Tab, arrow-key, Enter, Space, Escape, or character-key interaction as relevant. Pointer interaction may be used only to reveal or cross-check the target, not as proof that the target or control itself is keyboard reachable or operable. Do not rely on source-code inspection alone.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

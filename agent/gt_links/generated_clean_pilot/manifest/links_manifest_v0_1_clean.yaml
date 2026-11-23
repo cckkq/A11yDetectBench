@@ -1,0 +1,2480 @@
+version: links_manifest_v0_1_clean_single_pilot
+source_md:
+  template_md:
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.gitlab.create_new_dropdown_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.gitlab.merge_requests_dropdown_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.reddit.reply_anchor_inserts_form_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.shopping.compare_page_print_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.shopping.compare_page_remove_product_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.shopping.home_product_card_add_to_compare_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.shopping.product_detail_panel_tab_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.shopping_admin.left_nav_disclosure_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_function.shopping_admin.order_status_unassign_data_post_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.gitlab.dashboard_overview_view_all_without_section_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.gitlab.empty_gravatar_avatar_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.gitlab.empty_help_icon_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.gitlab.empty_markdown_heading_permalink_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.gitlab.rss_subscribe_anchor_without_target_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.reddit.comment_count_link_without_post_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.reddit.comment_parent_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.reddit.comment_permalink_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.reddit.comment_reply_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.reddit.generic_more_link_without_list_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.reddit.opaque_inline_external_link_text.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping.generic_view_all_without_programmatic_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping.order_reorder_without_row_header_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping.order_view_order_without_row_header_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping_admin.integration_reauthorize_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping_admin.notification_read_details_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping_admin.notification_remove_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping_admin.order_grid_view_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping_admin.product_reviews_show_reviews_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping_admin.source_grid_edit_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-templates/links.link_purpose.shopping_admin.tooltip_help_what_is_this_without_target_context.md
+  instance_md:
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl01.lf.create_new_dropdown_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl01.lf.merge_requests_dropdown_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl02.lp.dashboard_projects_view_all_without_section_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl02.lp.profile_rss_subscribe_anchor_without_target_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl03.lp.empty_gravatar_avatar_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl06.lp.empty_gravatar_avatar_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl11.lp.empty_help_icon_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl24.lp.empty_markdown_heading_permalink_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl50.lp.dashboard_activity_rss_subscribe_anchor_without_target_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl95.lf.create_new_dropdown_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl95.lf.merge_requests_dropdown_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/gitlab.gl99.lp.empty_help_icon_anchor_without_name.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd06.lf.reply_anchor_inserts_form_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd10.lp.comment_count_link_without_post_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd14.lp.generic_more_link_without_list_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd15.lf.reply_anchor_inserts_form_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd15.lp.comment_parent_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd15.lp.comment_permalink_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd15.lp.comment_reply_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd17.lp.comment_count_link_without_post_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd17.lp.generic_more_link_without_list_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd18.lp.comment_parent_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd18.lp.comment_permalink_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd18.lp.comment_reply_without_comment_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/reddit.rd20.lp.opaque_inline_external_link_text.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p01.lp.order_reorder_without_row_header_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p01.lp.order_view_order_without_row_header_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p02.lp.order_reorder_without_row_header_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p02.lp.order_view_order_without_row_header_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p03.lp.generic_view_all_without_programmatic_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p10.lf.product_detail_panel_tab_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p19.lf.compare_page_print_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p19.lf.compare_page_remove_product_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p20.lf.compare_page_print_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p20.lf.compare_page_remove_product_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p21.lp.generic_view_all_without_programmatic_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p22.lf.product_detail_panel_tab_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping.p29.lf.home_product_card_add_to_compare_command_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa01.lp.tooltip_help_what_is_this_without_target_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa02.lp.notification_read_details_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa02.lp.notification_remove_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa03.lf.left_nav_disclosure_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa04.lp.order_grid_view_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa40.lp.product_reviews_show_reviews_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa46.lp.tooltip_help_what_is_this_without_target_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa61.lf.order_status_unassign_data_post_anchor.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa62.lp.source_grid_edit_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa75.lp.integration_reauthorize_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa76.lf.left_nav_disclosure_anchor_without_widget_role.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa82.lp.notification_read_details_without_row_context.md
+  - >-
+    agent/gt_links/source_md_clean/issue-instances/shopping_admin.pa82.lp.notification_remove_without_row_context.md
+templates:
+- template_id: links.link_function.gitlab.create_new_dropdown_anchor_without_widget_role
+  template_name: GitLab Create new topbar anchor exposes link role but opens a menu
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        If an anchor element functions as a custom widget, it must have the appropriate ARIA
+        widget role.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components (including but not limited to: form elements, links
+        and components generated by scripts), the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: >-
+    The GitLab topbar `Create new...` anchor is exposed as a link but acts as a dropdown control
+    that expands menu content in place.
+  boundary: >-
+    Include only the `Create new...` topbar dropdown trigger. `Merge requests` is a separate
+    template because it is a different control and target.
+  instances:
+  - gitlab.gl01.lf.create_new_dropdown_anchor_without_widget_role
+  - gitlab.gl95.lf.create_new_dropdown_anchor_without_widget_role
+- template_id: links.link_function.gitlab.merge_requests_dropdown_anchor_without_widget_role
+  template_name: GitLab Merge requests topbar anchor exposes link role but opens a menu
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        If an anchor element functions as a custom widget, it must have the appropriate ARIA
+        widget role.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components (including but not limited to: form elements, links
+        and components generated by scripts), the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: >-
+    The GitLab topbar `Merge requests` anchor is exposed as a link but acts as a dropdown
+    control that expands menu content in place.
+  boundary: >-
+    Include only the `Merge requests` topbar dropdown trigger. `Create new...` is a separate
+    template because it is a different control and target.
+  instances:
+  - gitlab.gl01.lf.merge_requests_dropdown_anchor_without_widget_role
+  - gitlab.gl95.lf.merge_requests_dropdown_anchor_without_widget_role
+- template_id: links.link_function.reddit.reply_anchor_inserts_form_without_widget_role
+  template_name: Reddit Reply anchors expose link role but insert reply forms
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        If an anchor element functions as a custom widget, it must have the appropriate ARIA
+        widget role.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components (including but not limited to: form elements, links
+        and components generated by scripts), the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: >-
+    Reddit comment Reply anchors are exposed as links, but activation inserts or reveals a
+    reply form in place.
+  boundary: >-
+    Include only visible comment Reply anchors with data-form-url. Do not include the separate
+    Reply link-purpose issue.
+  instances:
+  - reddit.rd06.lf.reply_anchor_inserts_form_without_widget_role
+  - reddit.rd15.lf.reply_anchor_inserts_form_without_widget_role
+- template_id: links.link_function.shopping.compare_page_print_command_anchor
+  template_name: Compare page print anchor triggers printing instead of navigation
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Links must navigate to another page, location, or resource. Controls that perform
+        an action or change local state must not be exposed as ordinary links.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components, the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: The compare-products page exposes a print command as an anchor link.
+  boundary: >-
+    Include only the visible `Print This Page` anchor on the compare products page. Do not
+    merge this print command with remove-product commands.
+  instances:
+  - shopping.p19.lf.compare_page_print_command_anchor
+  - shopping.p20.lf.compare_page_print_command_anchor
+- template_id: links.link_function.shopping.compare_page_remove_product_command_anchor
+  template_name: Compare page remove-product anchors trigger removal commands
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Links must navigate to another page, location, or resource. Controls that perform
+        an action or change local state must not be exposed as ordinary links.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components, the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: Compare table `Remove Product` anchors start row-removal commands instead of navigating.
+  boundary: >-
+    Include only visible `Remove Product` anchors inside the compare table. Do not include
+    hidden mini-cart remove templates or the print command.
+  instances:
+  - shopping.p19.lf.compare_page_remove_product_command_anchor
+  - shopping.p20.lf.compare_page_remove_product_command_anchor
+- template_id: links.link_function.shopping.home_product_card_add_to_compare_command_anchor
+  template_name: Home product-card Add to Compare anchors perform commands
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Links must navigate to another page, location, or resource. Controls that perform
+        an action or change local state must not be exposed as ordinary links.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components, the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: >-
+    Product-card `Add to Compare` anchors perform an add-to-compare command instead of navigating
+    to link content.
+  boundary: >-
+    Include only product-card `Add to Compare` anchors on the shopping home page. Do not include
+    product-name links, image links, wishlist links, or cart links.
+  instances:
+  - shopping.p29.lf.home_product_card_add_to_compare_command_anchor
+- template_id: links.link_function.shopping.product_detail_panel_tab_anchor_without_widget_role
+  template_name: Shopping product detail tab anchors switch panels in place
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Links must navigate to another page, location, or resource. Controls that perform
+        an action or change local state must not be exposed as ordinary links.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components, the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: >-
+    Product detail anchors visually act as tabs and switch local panels instead of navigating
+    to link content.
+  boundary: >-
+    Include only product information panel anchors that behave as tabs. Do not include product
+    links, wishlist links, compare links, or normal navigation.
+  instances:
+  - shopping.p10.lf.product_detail_panel_tab_anchor_without_widget_role
+  - shopping.p22.lf.product_detail_panel_tab_anchor_without_widget_role
+- template_id: links.link_function.shopping_admin.left_nav_disclosure_anchor_without_widget_role
+  template_name: Admin left navigation anchors disclose submenus instead of navigating
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Links must navigate to another page, location, or resource. Controls that perform
+        an action or change local state must not be exposed as ordinary links.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components, the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: >-
+    Magento admin top-level left navigation uses anchors as submenu disclosure controls instead
+    of navigation links.
+  boundary: >-
+    Include only top-level admin left navigation anchors that expand submenus. Do not include
+    submenu links that navigate to real admin pages.
+  instances:
+  - shopping_admin.pa03.lf.left_nav_disclosure_anchor_without_widget_role
+  - shopping_admin.pa76.lf.left_nav_disclosure_anchor_without_widget_role
+- template_id: links.link_function.shopping_admin.order_status_unassign_data_post_anchor
+  template_name: Admin order-status Unassign anchors submit commands
+  domain: links
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+    assessment_requirement: L.1 Link Function
+    ai_web:
+      requirement_key: linkFunction
+      requirement_name: Link function
+      guidance_link_key: WCAG_4_1_2
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Links must navigate to another page, location, or resource. Controls that perform
+        an action or change local state must not be exposed as ordinary links.
+    wcag:
+      number: 4.1.2
+      name: Name, Role, Value
+      link_name: WCAG 4.1.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+      criterion_text: >-
+        For all user interface components, the name and role can be programmatically determined;
+        states, properties, and values that can be set by the user can be programmatically
+        set; and notification of changes to these items is available to user agents, including
+        assistive technologies.
+  pattern: Order status `Unassign` anchors are data-post commands rather than navigation links.
+  boundary: >-
+    Include only `Unassign` anchors in the Order Status grid. Do not include normal grid links
+    that navigate to edit or view pages.
+  instances:
+  - shopping_admin.pa61.lf.order_status_unassign_data_post_anchor
+- template_id: links.link_purpose.gitlab.dashboard_overview_view_all_without_section_context
+  template_name: GitLab profile projects View all link lacks section context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    The GitLab profile overview projects link named only `View all` relies on a visual section
+    heading rather than programmatically determined link context.
+  boundary: >-
+    This template is only for the visible `View all` link in the profile overview projects
+    section. Do not include the hidden Activity `View all` DOM node.
+  instances:
+  - gitlab.gl02.lp.dashboard_projects_view_all_without_section_context
+- template_id: links.link_purpose.gitlab.empty_gravatar_avatar_anchor_without_name
+  template_name: GitLab external Gravatar avatar anchors have empty names
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Profile header external Gravatar avatar anchors are exposed as links without accessible
+    names.
+  boundary: >-
+    Include only profile header external Gravatar avatar links. Do not include project-card
+    avatar links or named user-menu avatar controls.
+  instances:
+  - gitlab.gl03.lp.empty_gravatar_avatar_anchor_without_name
+  - gitlab.gl06.lp.empty_gravatar_avatar_anchor_without_name
+- template_id: links.link_purpose.gitlab.empty_help_icon_anchor_without_name
+  template_name: GitLab field help icon anchors have empty names
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: Field help icon anchors are exposed as links with empty accessible names.
+  boundary: >-
+    Include only visible field or setting help icon anchors whose icon does not provide a
+    link name. Do not include markdown heading permalink anchors.
+  instances:
+  - gitlab.gl11.lp.empty_help_icon_anchor_without_name
+  - gitlab.gl99.lp.empty_help_icon_anchor_without_name
+- template_id: links.link_purpose.gitlab.empty_markdown_heading_permalink_anchor_without_name
+  template_name: GitLab markdown heading permalink anchors have empty names
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Rendered markdown heading permalink anchors are exposed as links with empty accessible
+    names.
+  boundary: >-
+    Include only visible heading permalink anchors in rendered markdown content. Do not include
+    field help icon anchors.
+  instances:
+  - gitlab.gl24.lp.empty_markdown_heading_permalink_anchor_without_name
+- template_id: links.link_purpose.gitlab.rss_subscribe_anchor_without_target_context
+  template_name: GitLab Subscribe RSS links lack feed target context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    RSS feed links named only `Subscribe` do not programmatically identify the feed being
+    subscribed to.
+  boundary: >-
+    Include only RSS or Atom feed anchors whose accessible name is generic `Subscribe` and
+    whose feed target is not supplied by legitimate programmatic context.
+  instances:
+  - gitlab.gl02.lp.profile_rss_subscribe_anchor_without_target_context
+  - gitlab.gl50.lp.dashboard_activity_rss_subscribe_anchor_without_target_context
+- template_id: links.link_purpose.reddit.comment_count_link_without_post_context
+  template_name: Reddit comment-count links lack post context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Post-list comment-count links say only No comments or N comments and do not programmatically
+    include the associated post title.
+  boundary: >-
+    Include only submission comment-count/status anchors in post listings. Do not include
+    Comments navigation tabs or comment action links.
+  instances:
+  - reddit.rd10.lp.comment_count_link_without_post_context
+  - reddit.rd17.lp.comment_count_link_without_post_context
+- template_id: links.link_purpose.reddit.comment_parent_without_comment_context
+  template_name: Reddit comment Parent links lack parent-comment context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Repeated comment Parent links do not programmatically identify which parent comment they
+    open.
+  boundary: >-
+    Include only comment action-row anchors named Parent. Do not merge Reply, Permalink, and
+    Parent because they are different actions.
+  instances:
+  - reddit.rd15.lp.comment_parent_without_comment_context
+  - reddit.rd18.lp.comment_parent_without_comment_context
+- template_id: links.link_purpose.reddit.comment_permalink_without_comment_context
+  template_name: Reddit comment Permalink links lack comment context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Repeated comment Permalink links do not programmatically identify which comment permalink
+    will open.
+  boundary: >-
+    Include only comment action-row anchors named Permalink. Do not merge Reply, Permalink,
+    and Parent because they are different actions.
+  instances:
+  - reddit.rd15.lp.comment_permalink_without_comment_context
+  - reddit.rd18.lp.comment_permalink_without_comment_context
+- template_id: links.link_purpose.reddit.comment_reply_without_comment_context
+  template_name: Reddit comment Reply links lack comment context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Repeated comment Reply links do not programmatically identify which comment will be replied
+    to.
+  boundary: >-
+    Include only comment action-row anchors named Reply. Do not merge Reply, Permalink, and
+    Parent because they are different actions.
+  instances:
+  - reddit.rd15.lp.comment_reply_without_comment_context
+  - reddit.rd18.lp.comment_reply_without_comment_context
+- template_id: links.link_purpose.reddit.generic_more_link_without_list_context
+  template_name: Reddit More links lack list context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Generic More pagination links do not programmatically identify which listing will continue.
+  boundary: >-
+    Include only visible pagination anchors named More. Do not include content links or comment
+    action links.
+  instances:
+  - reddit.rd14.lp.generic_more_link_without_list_context
+  - reddit.rd17.lp.generic_more_link_without_list_context
+- template_id: links.link_purpose.reddit.opaque_inline_external_link_text
+  template_name: Reddit inline external link text lacks destination purpose
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Inline external link text is a vague phrase that does not identify the destination article
+    or resource.
+  boundary: >-
+    Include only inline content links whose text and legal programmatic context do not identify
+    the destination. Do not include comment action links.
+  instances:
+  - reddit.rd20.lp.opaque_inline_external_link_text
+- template_id: links.link_purpose.shopping.generic_view_all_without_programmatic_context
+  template_name: Shopping View All links lack programmatic destination context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Generic `View All` links rely on visual section context that is not programmatically bound
+    to the link.
+  boundary: >-
+    Include only generic `View All` links whose destination collection is not provided by
+    legal programmatic link context.
+  instances:
+  - shopping.p03.lp.generic_view_all_without_programmatic_context
+  - shopping.p21.lp.generic_view_all_without_programmatic_context
+- template_id: links.link_purpose.shopping.order_reorder_without_row_header_context
+  template_name: Shopping order Reorder links lack order context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Repeated `Reorder` links in customer order tables expose only action text without programmatically
+    associated order context.
+  boundary: >-
+    Include only order-table links named `Reorder`. Do not merge `Reorder` with `View Order`;
+    they are different actions.
+  instances:
+  - shopping.p01.lp.order_reorder_without_row_header_context
+  - shopping.p02.lp.order_reorder_without_row_header_context
+- template_id: links.link_purpose.shopping.order_view_order_without_row_header_context
+  template_name: Shopping order View Order links lack order context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Repeated `View Order` links in customer order tables expose only action text without programmatically
+    associated order context.
+  boundary: >-
+    Include only order-table links named `View Order`. Do not merge `View Order` with `Reorder`;
+    they are different actions.
+  instances:
+  - shopping.p01.lp.order_view_order_without_row_header_context
+  - shopping.p02.lp.order_view_order_without_row_header_context
+- template_id: links.link_purpose.shopping_admin.integration_reauthorize_without_row_context
+  template_name: Admin integration Reauthorize link lacks integration context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Integrations grid `Reauthorize` links expose only action text without programmatically
+    associated integration context.
+  boundary: This template is only for `Reauthorize` links in the Integrations grid.
+  instances:
+  - shopping_admin.pa75.lp.integration_reauthorize_without_row_context
+- template_id: links.link_purpose.shopping_admin.notification_read_details_without_row_context
+  template_name: Admin notification Read Details link lacks notification context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Notifications grid `Read Details` links expose only action text without programmatically
+    associated notification context.
+  boundary: This template is only for `Read Details`. `Remove` is a separate action template.
+  instances:
+  - shopping_admin.pa02.lp.notification_read_details_without_row_context
+  - shopping_admin.pa82.lp.notification_read_details_without_row_context
+- template_id: links.link_purpose.shopping_admin.notification_remove_without_row_context
+  template_name: Admin notification Remove links lack notification context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Notifications grid `Remove` links expose only action text without programmatically associated
+    notification context.
+  boundary: This template is only for `Remove`. `Read Details` is a separate action template.
+  instances:
+  - shopping_admin.pa02.lp.notification_remove_without_row_context
+  - shopping_admin.pa82.lp.notification_remove_without_row_context
+- template_id: links.link_purpose.shopping_admin.order_grid_view_without_row_context
+  template_name: Admin order grid View links lack order context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Admin Orders grid `View` action links expose only action text without programmatically
+    associated order context.
+  boundary: >-
+    This template is only for Orders grid `View` links whose order row is not programmatically
+    associated with the link.
+  instances:
+  - shopping_admin.pa04.lp.order_grid_view_without_row_context
+- template_id: links.link_purpose.shopping_admin.product_reviews_show_reviews_without_row_context
+  template_name: Admin product review Show Reviews links lack product context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Product Reviews Report `Show Reviews` links expose only action text without programmatically
+    associated product context.
+  boundary: This template is only for `Show Reviews` links in the Product Reviews Report grid.
+  instances:
+  - shopping_admin.pa40.lp.product_reviews_show_reviews_without_row_context
+- template_id: links.link_purpose.shopping_admin.source_grid_edit_without_row_context
+  template_name: Admin source grid Edit links lack source context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Inventory Sources grid `Edit` links expose only action text without programmatically associated
+    source context.
+  boundary: >-
+    This template is only for Sources grid `Edit` links whose source row is not programmatically
+    associated with the link.
+  instances:
+  - shopping_admin.pa62.lp.source_grid_edit_without_row_context
+- template_id: links.link_purpose.shopping_admin.tooltip_help_what_is_this_without_target_context
+  template_name: Admin What is this help links lack target context
+  domain: links
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    ai_web:
+      requirement_key: linkPurpose
+      requirement_name: Link purpose
+      guidance_link_key: WCAG_2_4_4
+      source_files:
+      - accessibility-insights-web-main/src/assessments/links/test-steps/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/test/links/link-purpose.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        The purpose of a link must be described by its link text alone, or by the link text
+        together with preceding page context.
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: WCAG 2.4.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  pattern: >-
+    Magento admin help links named `What is this?` expose only generic help text without programmatically
+    naming the field, control, or report scope they help.
+  boundary: >-
+    This template is for `What is this?` help links whose target object is not supplied by
+    same-text context, ARIA, label, description, or another legitimate programmatic link context.
+  instances:
+  - shopping_admin.pa01.lp.tooltip_help_what_is_this_without_target_context
+  - shopping_admin.pa46.lp.tooltip_help_what_is_this_without_target_context
+instances:
+- instance_id: gitlab.gl01.lf.create_new_dropdown_anchor_without_widget_role
+  template_id: links.link_function.gitlab.create_new_dropdown_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL01
+    legacy_instance_id: gitlab.gl01.lf.topbar_dropdown_anchor_without_widget_role
+    split_from_legacy_group: true
+  page:
+    site: gitlab
+    page_name: Dashboard
+    start_url: http://localhost:8023/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: header a[data-qa-selector='new_menu_toggle']
+    description: the `Create new...` anchor in the GitLab Dashboard top navigation
+    coverage_policy: single
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched `Create new...` anchor is exposed as a link, but activation opens the create
+      menu in place. The element has `data-toggle="dropdown"` and no ARIA widget role for
+      the dropdown-control behavior.
+- instance_id: gitlab.gl01.lf.merge_requests_dropdown_anchor_without_widget_role
+  template_id: links.link_function.gitlab.merge_requests_dropdown_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL01
+    legacy_instance_id: gitlab.gl01.lf.topbar_dropdown_anchor_without_widget_role
+    split_from_legacy_group: true
+  page:
+    site: gitlab
+    page_name: Dashboard
+    start_url: http://localhost:8023/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: header a[data-qa-selector='merge_requests_shortcut_button']
+    description: the `Merge requests` anchor in the GitLab Dashboard top navigation
+    coverage_policy: single
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched `Merge requests` anchor is exposed as a link, but activation opens the merge-request
+      menu in place. The element has `data-toggle="dropdown"` and no ARIA widget role for
+      the dropdown-control behavior.
+- instance_id: gitlab.gl02.lp.dashboard_projects_view_all_without_section_context
+  template_id: links.link_purpose.gitlab.dashboard_overview_view_all_without_section_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL02
+  page:
+    site: gitlab
+    page_name: User Profile
+    start_url: http://localhost:8023/byteblaze
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#content-body a.js-view-all[href='/users/byteblaze/projects']
+    description: the `View all` anchor in the projects overview section
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed name `View all` and no description. Its link name does
+      not identify the projects destination, and the visual `Personal projects` heading is
+      not supplied as a programmatically determined link context.
+- instance_id: gitlab.gl02.lp.profile_rss_subscribe_anchor_without_target_context
+  template_id: links.link_purpose.gitlab.rss_subscribe_anchor_without_target_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL02
+  page:
+    site: gitlab
+    page_name: User Profile
+    start_url: http://localhost:8023/byteblaze
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#content-body a[title='Subscribe'][href*='.atom']
+    description: the `Subscribe` RSS feed anchor on the user profile page
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed name `Subscribe` and no description. The name does not
+      identify that the link subscribes to the Byte Blaze user feed.
+- instance_id: gitlab.gl03.lp.empty_gravatar_avatar_anchor_without_name
+  template_id: links.link_purpose.gitlab.empty_gravatar_avatar_anchor_without_name
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL03
+  page:
+    site: gitlab
+    page_name: User Activity
+    start_url: http://localhost:8023/users/byteblaze/activity
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#content-body .avatar-holder > a[href*='gravatar.com/avatar']
+    description: the profile header external Gravatar avatar anchor on the user activity page
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched avatar anchor has an empty accessible name. Its child image has empty `alt`,
+      and no aria label, title, or description provides the external Gravatar link purpose.
+- instance_id: gitlab.gl06.lp.empty_gravatar_avatar_anchor_without_name
+  template_id: links.link_purpose.gitlab.empty_gravatar_avatar_anchor_without_name
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL06
+  page:
+    site: gitlab
+    page_name: User Projects
+    start_url: http://localhost:8023/users/byteblaze/projects
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#content-body .avatar-holder > a[href*='gravatar.com/avatar']
+    description: the profile header external Gravatar avatar anchor on the user projects page
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched avatar anchor has an empty accessible name. Its child image has empty alt,
+      and no aria label, title, or description provides the external Gravatar link purpose.
+- instance_id: gitlab.gl11.lp.empty_help_icon_anchor_without_name
+  template_id: links.link_purpose.gitlab.empty_help_icon_anchor_without_name
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL11
+  page:
+    site: gitlab
+    page_name: Profile
+    start_url: http://localhost:8023/-/profile
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#content-body a[href*='make-your-user-profile-page-private']
+    description: the empty help icon link beside the Private profile setting
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched help icon anchor has an empty accessible name. The nearby Private profile
+      label is visual context, but it is not exposed as the link name or accessible description.
+- instance_id: gitlab.gl24.lp.empty_markdown_heading_permalink_anchor_without_name
+  template_id: links.link_purpose.gitlab.empty_markdown_heading_permalink_anchor_without_name
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL24
+  page:
+    site: gitlab
+    page_name: Help
+    start_url: http://localhost:8023/help
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#content-body a.anchor[href^='#']
+    description: the markdown heading permalink anchors in the GitLab Help page content
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched heading permalink anchors have empty accessible names. Their heading text
+      is visual context, but it is not exposed as each link name or accessible description.
+- instance_id: gitlab.gl50.lp.dashboard_activity_rss_subscribe_anchor_without_target_context
+  template_id: links.link_purpose.gitlab.rss_subscribe_anchor_without_target_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL50
+  page:
+    site: gitlab
+    page_name: Dashboard Activity
+    start_url: http://localhost:8023/dashboard/activity
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: >-
+      main#content-body a[title='Subscribe'][href*='.atom'], main#content-body a[aria-label='Subscribe'][href*='.atom']
+    description: the Subscribe RSS feed anchor on the dashboard activity page
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed name Subscribe and no description. The name does not identify
+      that the link subscribes to the dashboard activity feed.
+- instance_id: gitlab.gl95.lf.create_new_dropdown_anchor_without_widget_role
+  template_id: links.link_function.gitlab.create_new_dropdown_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL95
+    legacy_instance_id: gitlab.gl95.lf.topbar_dropdown_anchor_without_widget_role
+    split_from_legacy_group: true
+  page:
+    site: gitlab
+    page_name: Explore
+    start_url: http://localhost:8023/explore
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: header a[data-qa-selector='new_menu_toggle']
+    description: the `Create new...` anchor in the GitLab Explore top navigation
+    coverage_policy: single
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched `Create new...` anchor is exposed as a link, but activation opens the create
+      menu in place. The element has `data-toggle="dropdown"` and no ARIA widget role for
+      the dropdown-control behavior.
+- instance_id: gitlab.gl95.lf.merge_requests_dropdown_anchor_without_widget_role
+  template_id: links.link_function.gitlab.merge_requests_dropdown_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL95
+    legacy_instance_id: gitlab.gl95.lf.topbar_dropdown_anchor_without_widget_role
+    split_from_legacy_group: true
+  page:
+    site: gitlab
+    page_name: Explore
+    start_url: http://localhost:8023/explore
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: header a[data-qa-selector='merge_requests_shortcut_button']
+    description: the `Merge requests` anchor in the GitLab Explore top navigation
+    coverage_policy: single
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched `Merge requests` anchor is exposed as a link, but activation opens the merge-request
+      menu in place. The element has `data-toggle="dropdown"` and no ARIA widget role for
+      the dropdown-control behavior.
+- instance_id: gitlab.gl99.lp.empty_help_icon_anchor_without_name
+  template_id: links.link_purpose.gitlab.empty_help_icon_anchor_without_name
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: GL99
+  page:
+    site: gitlab
+    page_name: New Snippet
+    start_url: http://localhost:8023/-/snippets/new
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#content-body a[href*='/help/user/public_access']
+    description: the empty help icon link beside the Visibility level field
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched help icon anchor has an empty accessible name. The nearby Visibility level
+      label is visual context, but it is not exposed as the link name or accessible description.
+- instance_id: reddit.rd06.lf.reply_anchor_inserts_form_without_widget_role
+  template_id: links.link_function.reddit.reply_anchor_inserts_form_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD06
+  page:
+    site: reddit
+    page_name: Comments Listing
+    start_url: http://localhost:9999/comments
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__reply-link[data-form-url]
+    description: the visible Reply anchors under Reddit comments on the Recent comments page
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      Activating a matched Reply anchor inserts or reveals a reply form in place. The action
+      does not navigate to link content, but the target remains exposed as an anchor/link.
+- instance_id: reddit.rd10.lp.comment_count_link_without_post_context
+  template_id: links.link_purpose.reddit.comment_count_link_without_post_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD10
+  page:
+    site: reddit
+    page_name: User Profile
+    start_url: http://localhost:9999/user/MarvelsGrantMan136
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: article.submission a.text-sm[href^='/f/']:has(> strong)
+    description: the No comments and N comments anchors in the user profile post listing
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links have names such as No comments or N comments. The link names do not
+      identify which post comment page will open, and the post title is not provided as programmatically
+      determined link context.
+- instance_id: reddit.rd14.lp.generic_more_link_without_list_context
+  template_id: links.link_purpose.reddit.generic_more_link_without_list_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD14
+  page:
+    site: reddit
+    page_name: AskReddit Forum
+    start_url: http://localhost:9999/f/AskReddit
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.button[rel='next']
+    description: the More pagination anchor at the bottom of the AskReddit listing
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link name is only More. It does not programmatically identify that it continues
+      or loads more items from the AskReddit listing.
+- instance_id: reddit.rd15.lf.reply_anchor_inserts_form_without_widget_role
+  template_id: links.link_function.reddit.reply_anchor_inserts_form_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD15
+  page:
+    site: reddit
+    page_name: Comment Thread
+    start_url: >-
+      http://localhost:9999/f/AskReddit/10224/why-bleaching-your-butthole-isn-t-called-changing-your-ring
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__reply-link[data-form-url]
+    description: the visible Reply anchors under comments in the AskReddit thread
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      Activating a matched Reply anchor inserts or reveals a reply form in place. The action
+      does not navigate to link content, but the target remains exposed as an anchor/link.
+- instance_id: reddit.rd15.lp.comment_parent_without_comment_context
+  template_id: links.link_purpose.reddit.comment_parent_without_comment_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD15
+  page:
+    site: reddit
+    page_name: Comment Thread
+    start_url: >-
+      http://localhost:9999/f/AskReddit/10224/why-bleaching-your-butthole-isn-t-called-changing-your-ring
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__parent-link[href*='/comment/']
+    description: the repeated Parent anchors in comment action rows
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Parent. The link names do not identify which parent
+      comment will open, and the parent-comment target is not provided as programmatically
+      determined link context.
+- instance_id: reddit.rd15.lp.comment_permalink_without_comment_context
+  template_id: links.link_purpose.reddit.comment_permalink_without_comment_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD15
+  page:
+    site: reddit
+    page_name: Comment Thread
+    start_url: >-
+      http://localhost:9999/f/AskReddit/10224/why-bleaching-your-butthole-isn-t-called-changing-your-ring
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__permalink[href*='/comment/']
+    description: the repeated Permalink anchors in Reddit comment action rows
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Permalink. The link names do not identify which comment
+      permalink will open, and the comment identity is not provided as programmatically determined
+      link context.
+- instance_id: reddit.rd15.lp.comment_reply_without_comment_context
+  template_id: links.link_purpose.reddit.comment_reply_without_comment_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD15
+  page:
+    site: reddit
+    page_name: Comment Thread
+    start_url: >-
+      http://localhost:9999/f/AskReddit/10224/why-bleaching-your-butthole-isn-t-called-changing-your-ring
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__reply-link[data-form-url]
+    description: the repeated Reply anchors in Reddit comment action rows
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Reply. The link names do not identify which comment
+      the reply action belongs to, and the comment text or author is not provided as programmatically
+      determined link context.
+- instance_id: reddit.rd17.lp.comment_count_link_without_post_context
+  template_id: links.link_purpose.reddit.comment_count_link_without_post_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD17
+  page:
+    site: reddit
+    page_name: Relationship Advice Forum
+    start_url: http://localhost:9999/f/relationship_advice
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: article.submission a.text-sm[href^='/f/']:has(> strong)
+    description: the N comments anchors in the relationship_advice post listing
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links have names such as N comments. The link names do not identify which
+      post comment page will open, and the post title is not provided as programmatically
+      determined link context.
+- instance_id: reddit.rd17.lp.generic_more_link_without_list_context
+  template_id: links.link_purpose.reddit.generic_more_link_without_list_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD17
+  page:
+    site: reddit
+    page_name: Relationship Advice Forum
+    start_url: http://localhost:9999/f/relationship_advice
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.button[rel='next']
+    description: the More pagination anchor at the bottom of the relationship_advice listing
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link name is only More. It does not programmatically identify that it continues
+      or loads more items from the relationship_advice listing.
+- instance_id: reddit.rd18.lp.comment_parent_without_comment_context
+  template_id: links.link_purpose.reddit.comment_parent_without_comment_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD18
+  page:
+    site: reddit
+    page_name: Comment Thread
+    start_url: >-
+      http://localhost:9999/f/relationship_advice/25599/update-my-f23-boyfriend-m33-just-left-me-in-europe-told-me
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__parent-link[href*='/comment/']
+    description: the repeated Parent anchors in this relationship_advice comment thread
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Parent. The link names do not identify which parent
+      comment will open, and the parent-comment target is not provided as programmatically
+      determined link context.
+- instance_id: reddit.rd18.lp.comment_permalink_without_comment_context
+  template_id: links.link_purpose.reddit.comment_permalink_without_comment_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD18
+  page:
+    site: reddit
+    page_name: Comment Thread
+    start_url: >-
+      http://localhost:9999/f/relationship_advice/25599/update-my-f23-boyfriend-m33-just-left-me-in-europe-told-me
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__permalink[href*='/comment/']
+    description: the repeated Permalink anchors in this relationship_advice comment thread
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Permalink. The link names do not identify which comment
+      permalink will open, and the comment identity is not provided as programmatically determined
+      link context.
+- instance_id: reddit.rd18.lp.comment_reply_without_comment_context
+  template_id: links.link_purpose.reddit.comment_reply_without_comment_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD18
+  page:
+    site: reddit
+    page_name: Comment Thread
+    start_url: >-
+      http://localhost:9999/f/relationship_advice/25599/update-my-f23-boyfriend-m33-just-left-me-in-europe-told-me
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.comment__reply-link[data-form-url]
+    description: the repeated Reply anchors in this relationship_advice comment thread
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Reply. The link names do not identify which comment
+      the reply action belongs to, and the comment text or author is not provided as programmatically
+      determined link context.
+- instance_id: reddit.rd20.lp.opaque_inline_external_link_text
+  template_id: links.link_purpose.reddit.opaque_inline_external_link_text
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: RD20
+  page:
+    site: reddit
+    page_name: News Comments
+    start_url: http://localhost:9999/f/news/comments
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a[href*='texastribune.org']
+    description: the inline external link whose visible text is `as American as apple pie.`
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link text is `as American as apple pie.`. The text and same paragraph context
+      do not identify the destination article or resource.
+- instance_id: shopping.p01.lp.order_reorder_without_row_header_context
+  template_id: links.link_purpose.shopping.order_reorder_without_row_header_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P01
+  page:
+    site: shopping
+    page_name: Customer Account
+    start_url: http://localhost:7770/customer/account/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: table#my-orders-table a.action.order
+    description: the repeated Reorder anchors in the customer account recent-orders table
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Reorder. The action cell is associated with the Action
+      column header, but the order number is an ordinary sibling data cell and is not linked
+      through row headers, headers/id, or ARIA.
+- instance_id: shopping.p01.lp.order_view_order_without_row_header_context
+  template_id: links.link_purpose.shopping.order_view_order_without_row_header_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P01
+  page:
+    site: shopping
+    page_name: Customer Account
+    start_url: http://localhost:7770/customer/account/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: table#my-orders-table a.action.view
+    description: the repeated View Order anchors in the customer account recent-orders table
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only View Order. The action cell is associated with the
+      Action column header, but the order number is an ordinary sibling data cell and is not
+      linked through row headers, headers/id, or ARIA.
+- instance_id: shopping.p02.lp.order_reorder_without_row_header_context
+  template_id: links.link_purpose.shopping.order_reorder_without_row_header_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P02
+  page:
+    site: shopping
+    page_name: Order History
+    start_url: http://localhost:7770/sales/order/history/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: table#my-orders-table a.action.order
+    description: the repeated Reorder anchors in the order history table
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only Reorder. The action cell is associated with the Action
+      column header, but the order number is an ordinary sibling data cell and is not linked
+      through row headers, headers/id, or ARIA.
+- instance_id: shopping.p02.lp.order_view_order_without_row_header_context
+  template_id: links.link_purpose.shopping.order_view_order_without_row_header_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P02
+  page:
+    site: shopping
+    page_name: Order History
+    start_url: http://localhost:7770/sales/order/history/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: table#my-orders-table a.action.view
+    description: the repeated View Order anchors in the order history table
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links are named only View Order. The action cell is associated with the
+      Action column header, but the order number is an ordinary sibling data cell and is not
+      linked through row headers, headers/id, or ARIA.
+- instance_id: shopping.p03.lp.generic_view_all_without_programmatic_context
+  template_id: links.link_purpose.shopping.generic_view_all_without_programmatic_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P03
+  page:
+    site: shopping
+    page_name: Downloadable Products
+    start_url: http://localhost:7770/downloadable/customer/products/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: .block-reorder a.action.view
+    description: the View All anchor in the Recently Ordered block
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link is named only View All. The section title is visual block context,
+      but it is not programmatically associated with the link through aria-labelledby, aria-describedby,
+      table headers, or list-item context that identifies the destination collection.
+- instance_id: shopping.p10.lf.product_detail_panel_tab_anchor_without_widget_role
+  template_id: links.link_function.shopping.product_detail_panel_tab_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P10
+  page:
+    site: shopping
+    page_name: Product Detail
+    start_url: >-
+      http://localhost:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: .product.data.items a.data.switch
+    description: the Details and Reviews product information tab anchors
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors are exposed as links with hrefs to page fragments, but activation
+      switches the visible product information panel in place. The interactive tab state is
+      represented on the parent title elements, while the focusable anchors themselves are
+      ordinary links.
+- instance_id: shopping.p19.lf.compare_page_print_command_anchor
+  template_id: links.link_function.shopping.compare_page_print_command_anchor
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P19
+  page:
+    site: shopping
+    page_name: Compare Products
+    start_url: >-
+      http://localhost:7770/catalog/product_compare/index/uenc/aHR0cDovL2xvY2FsaG9zdDo3NzcwL2N1c3RvbWVyL3NlY3Rpb24vbG9hZC8_c2VjdGlvbnM9Y29tcGFyZS1wcm9kdWN0cyUyQ21lc3NhZ2VzJmZvcmNlX25ld19zZWN0aW9uX3RpbWVzdGFtcD1mYWxzZSZfPTE3NzMwNjQwNTAxODY~/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.action.print
+    description: the Print This Page anchor above the compare products table
+    coverage_policy: single
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchor has `href="#"` and visible text `Print This Page`. Activation invokes
+      `window.print()` while the URL remains unchanged, so the control performs a print command
+      rather than navigating to link content.
+- instance_id: shopping.p19.lf.compare_page_remove_product_command_anchor
+  template_id: links.link_function.shopping.compare_page_remove_product_command_anchor
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P19
+  page:
+    site: shopping
+    page_name: Compare Products
+    start_url: >-
+      http://localhost:7770/catalog/product_compare/index/uenc/aHR0cDovL2xvY2FsaG9zdDo3NzcwL2N1c3RvbWVyL3NlY3Rpb24vbG9hZC8_c2VjdGlvbnM9Y29tcGFyZS1wcm9kdWN0cyUyQ21lc3NhZ2VzJmZvcmNlX25ld19zZWN0aW9uX3RpbWVzdGFtcD1mYWxzZSZfPTE3NzMwNjQwNTAxODY~/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: .table-comparison a.action.delete
+    description: the visible Remove Product anchors in the compare products table
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors have `href="#"`, title `Remove Product`, and `data-post` payloads
+      targeting `/catalog/product_compare/remove/` with confirmation. Activation starts a
+      remove-product command instead of navigating to link content.
+- instance_id: shopping.p20.lf.compare_page_print_command_anchor
+  template_id: links.link_function.shopping.compare_page_print_command_anchor
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P20
+  page:
+    site: shopping
+    page_name: Compare Products
+    start_url: >-
+      http://localhost:7770/catalog/product_compare/index/uenc/aHR0cDovL2xvY2FsaG9zdDo3NzcwL2N1c3RvbWVyL3NlY3Rpb24vbG9hZC8_c2VjdGlvbnM9Y29tcGFyZS1wcm9kdWN0cyUyQ21lc3NhZ2VzJmZvcmNlX25ld19zZWN0aW9uX3RpbWVzdGFtcD1mYWxzZSZfPTE3NzMwNjQwODY2MDA~/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.action.print
+    description: the Print This Page anchor above the compare products table
+    coverage_policy: single
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchor has `href="#"` and visible text `Print This Page`. Activation invokes
+      `window.print()` while the URL remains unchanged, so the control performs a print command
+      rather than navigating to link content.
+- instance_id: shopping.p20.lf.compare_page_remove_product_command_anchor
+  template_id: links.link_function.shopping.compare_page_remove_product_command_anchor
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P20
+  page:
+    site: shopping
+    page_name: Compare Products
+    start_url: >-
+      http://localhost:7770/catalog/product_compare/index/uenc/aHR0cDovL2xvY2FsaG9zdDo3NzcwL2N1c3RvbWVyL3NlY3Rpb24vbG9hZC8_c2VjdGlvbnM9Y29tcGFyZS1wcm9kdWN0cyUyQ21lc3NhZ2VzJmZvcmNlX25ld19zZWN0aW9uX3RpbWVzdGFtcD1mYWxzZSZfPTE3NzMwNjQwODY2MDA~/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: .table-comparison a.action.delete
+    description: the visible Remove Product anchors in the compare products table
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors have `href="#"`, title `Remove Product`, and `data-post` payloads
+      targeting `/catalog/product_compare/remove/` with confirmation. Activation starts a
+      remove-product command instead of navigating to link content.
+- instance_id: shopping.p21.lp.generic_view_all_without_programmatic_context
+  template_id: links.link_purpose.shopping.generic_view_all_without_programmatic_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P21
+  page:
+    site: shopping
+    page_name: Oral Pain Relief Category
+    start_url: http://localhost:7770/beauty-personal-care/oral-care/oral-pain-relief.html
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: .block-reorder a.action.view
+    description: the View All anchor in the Recently Ordered block
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link is named only View All. The section title is visual block context,
+      but it is not programmatically associated with the link through aria-labelledby, aria-describedby,
+      table headers, or list-item context that identifies the destination collection.
+- instance_id: shopping.p22.lf.product_detail_panel_tab_anchor_without_widget_role
+  template_id: links.link_function.shopping.product_detail_panel_tab_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P22
+  page:
+    site: shopping
+    page_name: Product Detail
+    start_url: >-
+      http://localhost:7770/auuxva-sport-soccer-ball-storage-bins-basket-football-theme-collapsible-storage-cube-rectangle-storage-box-with-handles-for-shelf-closet-nursery-bedroom-home-office-1-pack.html
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: .product.data.items a.data.switch
+    description: the Details and Reviews product information tab anchors
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors are exposed as links with hrefs to page fragments, but activation
+      switches the visible product information panel in place. The interactive tab state is
+      represented on the parent title elements, while the focusable anchors themselves are
+      ordinary links.
+- instance_id: shopping.p29.lf.home_product_card_add_to_compare_command_anchor
+  template_id: links.link_function.shopping.home_product_card_add_to_compare_command_anchor
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: P29
+  page:
+    site: shopping
+    page_name: Home
+    start_url: http://localhost:7770/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: .products-grid a.action.tocompare
+    description: the Add to Compare anchors in home page product cards
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors have href="#" and `data-post` values targeting `/catalog/product_compare/add/`.
+      Activation adds the product to the compare list and shows page feedback instead of navigating
+      to link content.
+- instance_id: shopping_admin.pa01.lp.tooltip_help_what_is_this_without_target_context
+  template_id: links.link_purpose.shopping_admin.tooltip_help_what_is_this_without_target_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA01
+  page:
+    site: shopping_admin
+    page_name: Dashboard
+    start_url: http://localhost:7780/admin/admin/dashboard/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#anchor-content a.admin__field-tooltip-action.action-help
+    description: the `What is this?` help link in the Dashboard store-view switcher
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed AX name `What is this?` and no description. Its title
+      repeats the same generic text, and the surrounding tooltip container does not programmatically
+      identify the scope or control that the help link explains.
+- instance_id: shopping_admin.pa02.lp.notification_read_details_without_row_context
+  template_id: links.link_purpose.shopping_admin.notification_read_details_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA02
+  page:
+    site: shopping_admin
+    page_name: Notifications
+    start_url: http://localhost:7780/admin/admin/notification/index/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#notificationGrid_table td.col-actions a.action-details'
+    description: the `Read Details` link in the Notifications grid Actions column
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed AX name `Read Details` and no description. Its action
+      cell and associated column header only identify `Actions`; the notification message
+      is in sibling `td.col-title` without row-header, headers/id, or ARIA association.
+- instance_id: shopping_admin.pa02.lp.notification_remove_without_row_context
+  template_id: links.link_purpose.shopping_admin.notification_remove_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA02
+  page:
+    site: shopping_admin
+    page_name: Notifications
+    start_url: http://localhost:7780/admin/admin/notification/index/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#notificationGrid_table td.col-actions a.action-delete'
+    description: the `Remove` links in the Notifications grid Actions column
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links have computed AX name `Remove` and no description. Their action cells
+      and associated column header only identify `Actions`; the notification messages are
+      in sibling `td.col-title` cells without row-header, headers/id, or ARIA association.
+- instance_id: shopping_admin.pa03.lf.left_nav_disclosure_anchor_without_widget_role
+  template_id: links.link_function.shopping_admin.left_nav_disclosure_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA03
+  page:
+    site: shopping_admin
+    page_name: System Account
+    start_url: http://localhost:7780/admin/admin/system_account/index/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#nav a[href="#"][onclick*="return false"]'
+    description: the top-level admin left navigation anchors
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors have `href="#"` and `onclick="return false;"` without button/disclosure
+      roles or aria-expanded state. Activation expands a left navigation submenu in place
+      while the current admin page remains loaded.
+- instance_id: shopping_admin.pa04.lp.order_grid_view_without_row_context
+  template_id: links.link_purpose.shopping_admin.order_grid_view_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA04
+  page:
+    site: shopping_admin
+    page_name: Orders
+    start_url: http://localhost:7780/admin/sales/order/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.action-menu-item
+    description: the `View` links in the Orders grid Action column
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links have computed AX name `View` and no description. Their action cells
+      and associated column header only identify `Action`; order numbers and customer names
+      are in sibling cells without row-header, headers/id, or ARIA association.
+- instance_id: shopping_admin.pa40.lp.product_reviews_show_reviews_without_row_context
+  template_id: links.link_purpose.shopping_admin.product_reviews_show_reviews_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA40
+  page:
+    site: shopping_admin
+    page_name: Product Reviews Report
+    start_url: http://localhost:7780/admin/reports/report_review/product/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#gridProducts_table td.col-actions a'
+    description: the `Show Reviews` links in the Product Reviews Report grid Action column
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links have computed AX name `Show Reviews` and no description. Their action
+      cells and associated column header only identify `Action`; the product names are in
+      sibling cells without row-header, headers/id, or ARIA association.
+- instance_id: shopping_admin.pa46.lp.tooltip_help_what_is_this_without_target_context
+  template_id: links.link_purpose.shopping_admin.tooltip_help_what_is_this_without_target_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA46
+  page:
+    site: shopping_admin
+    page_name: Coupons Report
+    start_url: http://localhost:7780/admin/reports/report_sales/coupons/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: main#anchor-content a.admin__field-tooltip-action.action-help
+    description: the `What is this?` help link in the Coupons Report store-view switcher
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed AX name `What is this?` and no description. Its title
+      repeats the same generic text, and the surrounding tooltip container does not programmatically
+      identify the scope or control that the help link explains.
+- instance_id: shopping_admin.pa61.lf.order_status_unassign_data_post_anchor
+  template_id: links.link_function.shopping_admin.order_status_unassign_data_post_anchor
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA61
+  page:
+    site: shopping_admin
+    page_name: Order Status
+    start_url: http://localhost:7780/admin/sales/order_status/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a[href="#"][data-post*="unassign"]
+    description: the Unassign command anchors in the order status grid
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors are exposed as links with `href="#"`, but their `data-post` payload
+      submits `/admin/sales/order_status/unassign/` commands for status/state pairs. They
+      do not navigate to link content and do not expose a button or command role.
+- instance_id: shopping_admin.pa62.lp.source_grid_edit_without_row_context
+  template_id: links.link_purpose.shopping_admin.source_grid_edit_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA62
+  page:
+    site: shopping_admin
+    page_name: Sources
+    start_url: http://localhost:7780/admin/inventory/source/index/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: a.action-menu-item
+    description: the `Edit` link in the inventory Sources grid Action column
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed AX name `Edit` and no description. Its action cell and
+      associated column header only identify `Action`; the source code and source name are
+      in sibling cells without row-header, headers/id, or ARIA association.
+- instance_id: shopping_admin.pa75.lp.integration_reauthorize_without_row_context
+  template_id: links.link_purpose.shopping_admin.integration_reauthorize_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA75
+  page:
+    site: shopping_admin
+    page_name: Integrations
+    start_url: http://localhost:7780/admin/admin/integration/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#integrationGrid_table td.col-activate a'
+    description: the `Reauthorize` link in the Integrations grid Activate column
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed AX name `Reauthorize` and no description. Its title repeats
+      the same action text, and the Activate cell/header do not programmatically identify
+      the integration row, whose name is in a sibling cell without row-header, headers/id,
+      or ARIA association.
+- instance_id: shopping_admin.pa76.lf.left_nav_disclosure_anchor_without_widget_role
+  template_id: links.link_function.shopping_admin.left_nav_disclosure_anchor_without_widget_role
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA76
+  page:
+    site: shopping_admin
+    page_name: Cache Management
+    start_url: http://localhost:7780/admin/admin/cache/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#nav a[href="#"][onclick*="return false"]'
+    description: the top-level admin left navigation anchors
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_function
+    wcag_target: WCAG 4.1.2 Name, Role, Value
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched anchors have `href="#"` and `onclick="return false;"` without button/disclosure
+      roles or aria-expanded state. Activation expands a left navigation submenu in place
+      while the Cache Management page remains loaded.
+- instance_id: shopping_admin.pa82.lp.notification_read_details_without_row_context
+  template_id: links.link_purpose.shopping_admin.notification_read_details_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA82
+  page:
+    site: shopping_admin
+    page_name: Notifications (System)
+    start_url: http://localhost:7780/admin/admin/notification/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#notificationGrid_table td.col-actions a.action-details'
+    description: the `Read Details` link in the System Notifications grid Actions column
+    coverage_policy: single
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched link has computed AX name `Read Details` and no description. Its action
+      cell and associated column header only identify `Actions`; the notification message
+      is in sibling `td.col-title` without row-header, headers/id, or ARIA association.
+- instance_id: shopping_admin.pa82.lp.notification_remove_without_row_context
+  template_id: links.link_purpose.shopping_admin.notification_remove_without_row_context
+  issue_present: true
+  source:
+    record_file: redacted_source_record_for_double_anonymous_review
+    page_id: PA82
+  page:
+    site: shopping_admin
+    page_name: Notifications (System)
+    start_url: http://localhost:7780/admin/admin/notification/
+    auth_state_file: runtime_auth_state_placeholder.json
+  target:
+    selector: '#notificationGrid_table td.col-actions a.action-delete'
+    description: the `Remove` links in the System Notifications grid Actions column
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  gold:
+    expected_verdict: issue_found
+    evidence_rule: >-
+      The matched links have computed AX name `Remove` and no description. Their action cells
+      and associated column header only identify `Actions`; the notification messages are
+      in sibling `td.col-title` cells without row-header, headers/id, or ARIA association.
+generation_scope:
+  levels:
+  - level_1_direct_verification
+  - level_2_single_issue
+  - level_3_single_issue
+  merge_generation: false
+  note: >-
+    This pilot generates single-issue L1/L2/L3 assets only. L2/L3 merge assets require merge
+    review inventory claims.

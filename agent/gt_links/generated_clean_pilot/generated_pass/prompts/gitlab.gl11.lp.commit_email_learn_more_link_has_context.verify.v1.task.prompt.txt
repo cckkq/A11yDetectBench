@@ -1,0 +1,9 @@
+Task: Inspect the Learn more link in the Commit email form group for WCAG 2.4.4 Link Purpose (In Context).
+
+Target selector: `form a[href*='change-the-email-displayed-on-your-commits']`
+
+WCAG criterion: The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.
+
+Report a WCAG 2.4.4 link-purpose issue only if the link purpose cannot be determined from the accessible name alone or from the accessible name together with its programmatically determined link context.
+
+If the issue is present, use verdict `issue_found`; otherwise use verdict `no_issue_found`.

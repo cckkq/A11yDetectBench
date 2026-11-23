@@ -1,0 +1,40 @@
+task_id: shopping_admin.pa02.page_limit_context_change.verify.v1
+instance_id: shopping_admin.pa02.page_limit_context_change
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_keyboard/generated_clean_pilot/generated_pass/evaluate-rules/shopping_admin.pa02.page_limit_context_change.verify.shared.v1.yaml
+difficulty: level_1_direct_verification
+issue_domain: keyboard
+issue_family: on_input
+wcag_target: WCAG 3.2.2 On Input
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/on-input.html
+wcag_clause_text: >-
+  Changing the setting of any user interface component does not automatically cause a change
+  of context unless the user has been advised of the behavior before using the component.
+ai_web:
+  requirement_key: on-input
+  requirement_name: On input
+  guidance_link_key: WCAG_3_2_2
+  source_files:
+  - >-
+    accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/on-input.tsx
+  - accessibility-insights-web-main/src/content/test/keyboard/on-input.tsx
+  - accessibility-insights-web-main/src/content/guideline-metadata.ts
+  requirement_text: >-
+    Changing a user interface component setting must not automatically cause a context change
+    unless users are advised before using the component.
+modality_policy: unrestricted_detection
+start_url: http://localhost:7780/admin/admin/notification/index/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: the notifications grid page-limit selector
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  selector: verified CSS selector for the reported keyboard target, or empty string
+  target: natural-language target description
+  issue_type: on_input
+  observed_behavior: concise description of the observed keyboard behavior
+  evidence: >-
+    concrete keyboard path, rendered behavior, DOM, or accessibility facts supporting the
+    verdict
+target_selector: select#notificationGrid_page-limit

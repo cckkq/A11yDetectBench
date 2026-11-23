@@ -1,0 +1,89 @@
+task_id: shopping_admin.pa11.keyboard_assessment.verify.level3.v1
+instance_id: shopping_admin.pa11.keyboard_assessment
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA11
+  review_status: current_clean_inventory
+page:
+  site: shopping_admin
+  page_name: Categories
+  start_url: http://localhost:7780/admin/catalog/category/
+scope:
+  assessment_scope: Keyboard assessment scope 1.1, 1.2, 1.3, 1.4, and 1.6
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping_admin.pa11.category_tree_not_keyboard_reachable
+    target:
+      selector: '#tree-div a'
+      description: the visible category tree node anchors under Collapse All and Expand All
+      coverage_policy: representative_group
+    criterion:
+      issue_family: keyboard_nonreachable
+      wcag_target: WCAG 2.1.1 Keyboard
+      assessment_requirement: 1.1 Keyboard navigation
+      ai_web:
+        requirement_key: keyboard-navigation
+        requirement_name: Keyboard navigation
+        guidance_link_key: WCAG_2_1_1
+        source_files:
+        - >-
+          accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/keyboard-navigation.tsx
+        - accessibility-insights-web-main/src/content/test/keyboard/keyboard-navigation.tsx
+        - accessibility-insights-web-main/src/content/guideline-metadata.ts
+        requirement_text: Users must be able to navigate to all interactive interface components
+          using a keyboard.
+      wcag:
+        number: 2.1.1
+        name: Keyboard
+        link_name: WCAG 2.1.1
+        url: https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html
+        criterion_text: >-
+          All functionality of the content is operable through a keyboard interface without
+          requiring specific timings for individual keystrokes, except where the underlying
+          function requires input that depends on the path of the user's movement and not
+          just the endpoints.
+    evidence_rule: >-
+      The target (the visible category tree node anchors under Collapse All and Expand All)
+      is visible and pointer-operable or part of an active widget, but expected keyboard navigation
+      cannot reach or complete operation of that same target. Reporting a different keyboard
+      issue on the page does not satisfy this rule.
+  - issue_id: shopping_admin.pa11.collapsible_panel_expanded_content_partially_not_tabbable
+    target:
+      selector: '#ui-datepicker-div .ui-datepicker-prev, #ui-datepicker-div .ui-datepicker-next'
+      description: >-
+        the previous and next month links in the datepicker opened from the Schedule Design
+        Update panel
+      coverage_policy: representative_group
+    criterion:
+      issue_family: keyboard_nonreachable
+      wcag_target: WCAG 2.1.1 Keyboard
+      assessment_requirement: 1.1 Keyboard navigation
+      ai_web:
+        requirement_key: keyboard-navigation
+        requirement_name: Keyboard navigation
+        guidance_link_key: WCAG_2_1_1
+        source_files:
+        - >-
+          accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/keyboard-navigation.tsx
+        - accessibility-insights-web-main/src/content/test/keyboard/keyboard-navigation.tsx
+        - accessibility-insights-web-main/src/content/guideline-metadata.ts
+        requirement_text: Users must be able to navigate to all interactive interface components
+          using a keyboard.
+      wcag:
+        number: 2.1.1
+        name: Keyboard
+        link_name: WCAG 2.1.1
+        url: https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html
+        criterion_text: >-
+          All functionality of the content is operable through a keyboard interface without
+          requiring specific timings for individual keystrokes, except where the underlying
+          function requires input that depends on the path of the user's movement and not
+          just the endpoints.
+    evidence_rule: >-
+      The target (the previous and next month links in the datepicker opened from the Schedule
+      Design Update panel) is visible and pointer-operable or part of an active widget, but
+      expected keyboard navigation cannot reach or complete operation of that same target.
+      Reporting a different keyboard issue on the page does not satisfy this rule.

@@ -1,0 +1,9 @@
+Task: Inspect input-error identification paths on this page for WCAG 3.3.1 Error Identification.
+
+WCAG criterion: If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.
+
+Report a WCAG 3.3.1 error-identification issue for each target path where the target path has an automatically detected input error and the page does not identify the item that is in error or describe the error to the user.
+
+Do not report the rendered status/error/progress message node, or the submit button when the issue belongs to a field/control.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

@@ -1,0 +1,58 @@
+task_id: shopping_admin.pa27.f21t6c.filter_dropdown_subcontrols_no_visible_focus.verify.level2.v1
+instance_id: shopping_admin.pa27.f21t6c.filter_dropdown_subcontrols_no_visible_focus
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA27
+page:
+  site: shopping_admin
+  page_name: CMS Pages
+  start_url: http://localhost:7780/admin/cms/page/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 2.4.7 Focus Visible
+  - focus.visible_focus.filter_dropdown_subcontrols_no_visible_focus
+  target:
+    selector: >-
+      .admin__data-grid-filters > .admin__form-field:nth-child(8) .admin__action-multiselect-wrap,
+      .admin__data-grid-filters > .admin__form-field:nth-child(11) .admin__action-multiselect-wrap,
+      .admin__data-grid-filters > .admin__form-field:nth-child(12) .admin__action-multiselect-wrap
+    description: >-
+      the Asset, Layout, and Status subcontrols inside the expanded Filter panel of the CMS
+      Pages grid
+    coverage_policy: representative_group
+  criterion:
+    issue_family: visible_focus
+    wcag_target: WCAG 2.4.7 Focus Visible
+    assessment_requirement: F.1 Visible Focus
+    ai_web:
+      requirement_key: visible-focus
+      requirement_name: Visible focus
+      guidance_link_key: WCAG_2_4_7
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/visible-focus.tsx
+      - accessibility-insights-web-main/src/content/test/focus/visible-focus.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: Components must provide a visible indication when they have the input
+        focus.
+    wcag:
+      number: 2.4.7
+      name: Focus Visible
+      link_name: WCAG 2.4.7
+      url: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
+      criterion_text: >-
+        Any keyboard operable user interface has a mode of operation where the keyboard focus
+        indicator is visible.
+  evidence_rule: >-
+    The Asset, Layout, and Status filter subcontrols receive keyboard focus, but no user-perceivable
+    focus indicator is visible while one is keyboard-focused.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated focus issues does not count for this task.

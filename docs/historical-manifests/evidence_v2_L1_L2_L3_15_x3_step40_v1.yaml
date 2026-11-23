@@ -1,0 +1,34 @@
+experiment_id: evidence_v2_L1_L2_L3_15_x3_step40_v1
+description: >
+  Evidence v2 all-level Focus Visible rerun on the same 15-instance set as the
+  cleaned L1/L2/L3 runs. Runs L1, L2, and L3 together with repeats=3 and
+  max_steps=40 to measure the larger step budget after the prompt
+  evidence/exploration wording update.
+
+defaults:
+  levels:
+    - verify.v1
+    - verify.level2.v1
+    - verify.level3.v1
+  max_steps: 40
+  repeats: 3
+
+sites:
+  shopping_admin:
+    - task_base: shopping_admin.pa08.f21t1.datepicker_trigger_no_visible_focus
+    - task_base: shopping_admin.pa15.f21t1.datepicker_trigger_no_visible_focus
+    - task_base: shopping_admin.pa02.f21t6a.grid_small_selectors_no_visible_focus
+    - task_base: shopping_admin.pa04.f21t6a.grid_small_selectors_no_visible_focus
+    - task_base: shopping_admin.pa58.f21t6b.admin_action_buttons_no_visible_focus
+    - task_base: shopping_admin.pa15.f21t6b.admin_action_buttons_no_visible_focus
+    - task_base: shopping_admin.pa75.f21t6b.admin_action_buttons_no_visible_focus
+    - task_base: shopping_admin.pa27.f21t6c.filter_dropdown_subcontrols_no_visible_focus
+    - task_base: shopping_admin.pa62.f21t6c.filter_dropdown_subcontrols_no_visible_focus
+  gitlab:
+    - task_base: gitlab.gl01.f21t3.project_initial_avatar_links_no_visible_focus
+    - task_base: gitlab.gl02.f21t3.project_initial_avatar_links_no_visible_focus
+    - task_base: gitlab.gl96.f21t4.explore_tab_controls_no_visible_focus
+    - task_base: gitlab.gl01.f21t4.explore_tab_controls_no_visible_focus
+  shopping:
+    - task_base: shopping.p29.f21t10.header_menu_expanded_item_no_visible_focus
+    - task_base: shopping.p16.f21t10.header_menu_expanded_item_no_visible_focus

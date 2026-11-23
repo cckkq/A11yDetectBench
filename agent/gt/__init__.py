@@ -1,0 +1,1 @@
+"""GT assets for benchmark drafting and replay."""

@@ -1,0 +1,43 @@
+task_id: shopping_admin.pa53.e1.invalid_input_degrades_to_page_level_failure.verify.v1
+instance_id: shopping_admin.pa53.e1.invalid_input_degrades_to_page_level_failure
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA53
+page:
+  site: shopping_admin
+  page_name: Bestsellers Report
+  start_url: http://localhost:7780/admin/reports/report_sales/bestsellers/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 3.3.1 Error Identification
+  - error.e1.invalid_input_degrades_to_page_level_failure
+  target:
+    selector: input#sales_report_from[name="from"], input#sales_report_to[name="to"]
+    description: the From and To date inputs in the Magento Admin Bestsellers Report form
+    coverage_policy: representative_group
+  criterion:
+    issue_family: error_identification
+    wcag_target: WCAG 3.3.1 Error Identification
+    assessment_requirement: E.1 Error Identification
+    wcag:
+      number: 3.3.1
+      name: Error Identification
+      link_name: WCAG 3.3.1
+      url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+      criterion_text: >-
+        If an input error is automatically detected, the item that is in error is identified
+        and the error is described to the user in text.
+  evidence_rule: >-
+    The invalid Bestsellers Report date path is handled as a generic processing failure instead
+    of identifying the target From or To date field and describing the input error to the
+    user in understandable text.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

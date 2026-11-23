@@ -1,0 +1,28 @@
+task_id: reddit.ex01.e2.generic_rejection_without_guidance.verify.v1
+instance_id: reddit.ex01.e2.generic_rejection_without_guidance
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_errors/generated_clean_pilot/generated/evaluate-rules/reddit.ex01.e2.generic_rejection_without_guidance.verify.shared.v1.yaml
+difficulty: level_1_direct_verification
+issue_domain: error
+issue_family: error_suggestion
+wcag_target: WCAG 3.3.3 Error Suggestion
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html
+wcag_clause_text: >-
+  If an input error is automatically detected and suggestions for correction are known, then
+  the suggestions are provided to the user, unless it would jeopardize the security or purpose
+  of the content.
+modality_policy: unrestricted_detection
+start_url: http://localhost:9999/login
+auth_state_file: null
+target_description: the username and password inputs in the Reddit login form
+probe: Enter invalid credentials in the target fields and submit the login form.
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  selector: verified CSS selector for the field/control path where the issue belongs
+  target: natural-language description of the field/control path where the issue belongs
+  issue_type: error_suggestion
+  observed_behavior: concise description of the observed error behavior
+  evidence: concrete DOM, interaction, text, or accessibility facts supporting the verdict
+target_selector: input#login-username[name="_username"], input#login-password[name="_password"]

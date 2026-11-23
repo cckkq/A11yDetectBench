@@ -1,0 +1,11 @@
+Task: Inspect the Ship Date From and To filter inputs in the Magento Admin Shipments grid for WCAG 3.3.3 Error Suggestion. For this target, open the Filters panel, enter `not-a-date` in the target From field, leave the To field unchanged, and apply filters.
+
+Target selector: `input[name="created_at[from]"], input[name="created_at[to]"]`
+
+WCAG criterion: If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.
+
+Report a WCAG 3.3.3 error-suggestion issue only if the target path has an automatically detected input error and the page does not provide an actionable correction suggestion.
+
+Do not report the rendered status/error/progress message node, or the submit button when the issue belongs to a field/control.
+
+If the issue is present, use verdict `issue_found`; otherwise use verdict `no_issue_found`.

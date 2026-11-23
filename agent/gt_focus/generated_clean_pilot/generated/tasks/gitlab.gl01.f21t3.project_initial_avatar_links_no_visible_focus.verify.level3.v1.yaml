@@ -1,0 +1,59 @@
+task_id: gitlab.gl01.f21t3.project_initial_avatar_links_no_visible_focus.verify.level3.v1
+instance_id: gitlab.gl01.f21t3.project_initial_avatar_links_no_visible_focus
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_focus/generated_clean_pilot/generated/evaluate-rules/gitlab.gl01.f21t3.project_initial_avatar_links_no_visible_focus.verify.level3.v1.yaml
+difficulty: level_3_focus_assessment_scope
+issue_domain: focus
+issue_family: focus_assessment_f1_to_f6
+wcag_target: Focus assessment F.1-F.6
+wcag_clause_text: >-
+  Focus assessment scope covers F.1 Visible Focus, F.2 Focus Order, F.3 Closing Content, F.4
+  Modal Dialogs, F.5 Revealing Content, and F.6 Focus Not Obscured.
+modality_policy: keyboard_primary_pointer_confirmation
+start_url: http://localhost:8023/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: focus behavior within Focus assessment scope F.1-F.6 on this page
+setup: null
+wcag_criteria:
+  F.1 Visible Focus:
+    target: WCAG 2.4.7 Focus Visible
+    text: Components must provide a visible indication when they have the input focus.
+    url: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
+  F.2 Focus Order:
+    target: WCAG 2.4.3 Focus Order
+    text: Components must receive focus in an order that preserves meaning and operability.
+    url: https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html
+  F.3 Closing Content:
+    target: WCAG 2.4.3 Focus Order
+    text: Closing revealed content must move input focus to the component that revealed it.
+    url: https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html
+  F.4 Modal Dialogs:
+    target: WCAG 2.4.3 Focus Order
+    text: Users must not be able to Tab away from a modal dialog without explicitly dismissing
+      it.
+    url: https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html
+  F.5 Revealing Content:
+    target: WCAG 2.4.3 Focus Order
+    text: >-
+      Activating a component that reveals hidden content must move input focus into the revealed
+      content.
+    url: https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html
+  F.6 Focus Not Obscured:
+    target: WCAG 2.4.11 Focus Not Obscured (Minimum)
+    text: >-
+      For elements receiving keyboard focus, its focus indicator must be at least partially
+      visible and not obscured by author-created content which overlays it, unless the focused
+      element can be revealed without requiring the user to advance focus in the UI.
+    url: https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html
+output_format:
+  verdict: issue_found | no_issue_found
+  issues:
+  - selector: verified CSS selector for the reported focus target, or empty string
+    target: natural-language description of the reported focus target
+    issue_type: >-
+      visible_focus | focus_order | closing_content | modal_dialogs | revealing_content |
+      focus_not_obscured
+    observed_behavior: concise description of the observed focus behavior
+    evidence: concrete keyboard path, rendered state, DOM, or accessibility facts supporting
+      the issue

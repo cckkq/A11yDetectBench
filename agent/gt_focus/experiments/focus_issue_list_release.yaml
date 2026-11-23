@@ -1,0 +1,98 @@
+experiment_id: focus_issue_list_release
+description: Release index of the submitted issue-list task files. Repeats and step limit follow the
+  published artifact protocol.
+defaults:
+  task_root: agent/gt_focus/generated_clean_pilot/generated_merge/tasks
+  levels:
+  - verify.level2.v1
+  - verify.level3.v1
+  max_steps: 25
+  repeats: 3
+sites:
+  gitlab:
+  - task_base: gitlab.gl01.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: gitlab.gl01.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: gitlab.gl02.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: gitlab.gl02.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: gitlab.gl96.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: gitlab.gl96.visible_focus
+    levels:
+    - verify.level2.v1
+  shopping:
+  - task_base: shopping.p16.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping.p16.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping.p29.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping.p29.visible_focus
+    levels:
+    - verify.level2.v1
+  shopping_admin:
+  - task_base: shopping_admin.pa02.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa02.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa04.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa04.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa08.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa08.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa10.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa10.revealing_content
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa15.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa15.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa27.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa27.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa58.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa58.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa62.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa62.visible_focus
+    levels:
+    - verify.level2.v1
+  - task_base: shopping_admin.pa75.focus_assessment
+    levels:
+    - verify.level3.v1
+  - task_base: shopping_admin.pa75.visible_focus
+    levels:
+    - verify.level2.v1

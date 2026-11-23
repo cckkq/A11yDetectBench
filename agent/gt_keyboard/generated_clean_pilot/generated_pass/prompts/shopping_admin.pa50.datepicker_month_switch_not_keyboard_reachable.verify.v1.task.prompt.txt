@@ -1,0 +1,13 @@
+Task: Inspect the previous and next month links in the opened Customer Orders datepicker for Accessibility Insights Keyboard navigation.
+
+Target selector: `#ui-datepicker-div .ui-datepicker-prev, #ui-datepicker-div .ui-datepicker-next`
+
+WCAG reference: WCAG 2.1.1 Keyboard - All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.
+
+Open a Customer Orders report datepicker before inspecting the month navigation links.
+
+Report a WCAG 2.1.1 keyboard reachability issue only if the specified target or control cannot be reached by keyboard navigation, cannot be operated with its expected keyboard interaction once reached, or disrupts the expected keyboard path for reaching downstream controls.
+
+Verify keyboard behavior by navigating to and operating the same target or control through observed Tab, Shift+Tab, arrow-key, Enter, Space, Escape, or character-key interaction as relevant. Pointer interaction may be used only to reveal or cross-check the target, not as proof that the target or control itself is keyboard reachable or operable. Do not rely on source-code inspection alone.
+
+If the issue is present, use verdict `issue_found`; otherwise use verdict `no_issue_found`.

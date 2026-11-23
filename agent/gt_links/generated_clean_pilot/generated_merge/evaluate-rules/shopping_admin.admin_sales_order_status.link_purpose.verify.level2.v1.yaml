@@ -1,0 +1,42 @@
+task_id: shopping_admin.admin_sales_order_status.link_purpose.verify.level2.v1
+instance_id: shopping_admin.admin_sales_order_status.link_purpose
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA61
+  review_status: source_and_live_checked
+page:
+  site: shopping_admin
+  page_name: Order Status
+  start_url: http://localhost:7780/admin/sales/order_status/
+scope:
+  issue_family: link_purpose
+  wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  assessment_requirement: L.2 Link Purpose
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping_admin.pa61.lp.order_status_unassign_without_row_context
+    target:
+      selector: '#sales_order_status_grid_table a[href=''#''][data-post*=''unassign'']'
+      description: the ten `Unassign` action links in the order status grid
+      coverage_policy: representative_group
+    criterion:
+      issue_family: link_purpose
+      wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+      assessment_requirement: L.2 Link Purpose
+      wcag:
+        number: 2.4.4
+        name: Link Purpose (In Context)
+        link_name: Link Purpose (In Context)
+        url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+        criterion_text: >-
+          The purpose of each link can be determined from the link text alone or from the
+          link text together with its programmatically determined link context, except where
+          the purpose of the link would be ambiguous to users in general.
+    evidence_rule: >-
+      The matched links all have the accessible name `Unassign` and no programmatically associated
+      status/state context. The action cell text is only `Unassign`, the `Action` header is
+      not bound with `headers` or `scope`, and the status/state values in sibling cells or
+      `data-post` are not part of the link name or a valid programmatic context.

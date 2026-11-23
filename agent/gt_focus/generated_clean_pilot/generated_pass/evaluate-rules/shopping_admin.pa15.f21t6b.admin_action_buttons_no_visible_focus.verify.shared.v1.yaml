@@ -1,0 +1,55 @@
+task_id: shopping_admin.pa15.f21t6b.admin_action_buttons_no_visible_focus.verify.v1
+instance_id: shopping_admin.pa15.f21t6b.admin_action_buttons_no_visible_focus
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA15
+  matched_positive: shopping_admin.pa15.f21t6b.admin_action_buttons_no_visible_focus
+page:
+  site: shopping_admin
+  page_name: Catalog Price Rules
+  start_url: http://localhost:7780/admin/catalog_rule/promo_catalog/
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 2.4.7 Focus Visible
+  - focus.visible_focus.admin_action_buttons_no_visible_focus
+  target:
+    selector: button#apply_rules
+    description: the Apply Rules button in the top toolbar of the Catalog Price Rules page
+    coverage_policy: single
+  criterion:
+    issue_family: visible_focus
+    wcag_target: WCAG 2.4.7 Focus Visible
+    assessment_requirement: F.1 Visible Focus
+    ai_web:
+      requirement_key: visible-focus
+      requirement_name: Visible focus
+      guidance_link_key: WCAG_2_4_7
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/visible-focus.tsx
+      - accessibility-insights-web-main/src/content/test/focus/visible-focus.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: Components must provide a visible indication when they have the input
+        focus.
+    wcag:
+      number: 2.4.7
+      name: Focus Visible
+      link_name: WCAG 2.4.7
+      url: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
+      criterion_text: >-
+        Any keyboard operable user interface has a mode of operation where the keyboard focus
+        indicator is visible.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target: the runtime patch is expected to add
+    a user-perceivable focus indicator for the same keyboard-focused or keyboard-current target.
+    A reported visible-focus issue on this matched target is a false alarm for this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported focus issue on this clean target is a false alarm for this task.
+- Reporting unrelated focus issues does not count for this task.

@@ -1,0 +1,15 @@
+Task: Inspect focus behavior within Focus assessment scope F.1-F.6 on the Notifications page.
+
+WCAG criteria:
+F.1 Visible Focus -> WCAG 2.4.7 Focus Visible: Components must provide a visible indication when they have the input focus.
+F.2 Focus Order -> WCAG 2.4.3 Focus Order: Components must receive focus in an order that preserves meaning and operability.
+F.3 Closing Content -> WCAG 2.4.3 Focus Order: Closing revealed content must move input focus to the component that revealed it.
+F.4 Modal Dialogs -> WCAG 2.4.3 Focus Order: Users must not be able to Tab away from a modal dialog without explicitly dismissing it.
+F.5 Revealing Content -> WCAG 2.4.3 Focus Order: Activating a component that reveals hidden content must move input focus into the revealed content.
+F.6 Focus Not Obscured -> WCAG 2.4.11 Focus Not Obscured (Minimum): For elements receiving keyboard focus, its focus indicator must be at least partially visible and not obscured by author-created content which overlays it, unless the focused element can be revealed without requiring the user to advance focus in the UI.
+
+Report an issue for each component or focus interaction where either F.1 applies: the component receives keyboard focus or becomes the keyboard-current item, but no user-perceivable focus indicator is visible in the rendered page state; or F.2 applies: components receive focus in an order that does not preserve meaning and operability; or F.3 applies: closing revealed content does not move input focus to the component that revealed it; or F.4 applies: users can Tab away from a modal dialog without explicitly dismissing it; or F.5 applies: keyboard activation reveals hidden content, but focus does not move into the revealed content; or F.6 applies: the focus indicator for a keyboard-focused element is fully obscured by author-created overlaying content.
+
+For visible-focus checks, first show that real keyboard navigation placed focus on the target. Mouse clicks, JavaScript `.focus()`, and browser-use highlights or overlays do not prove focus or visible focus. Judge visible focus from the rendered page: the focused target must have a visible indication that lets a keyboard user tell where focus is. A selected or current style that was already visible, or a CSS change that is too subtle to see clearly, is not enough. Arrow keys are valid inside menus, tabs, listboxes, and similar widgets; if DOM focus stays on a container, identify the active item with aria-activedescendant or an equivalent current-item state.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

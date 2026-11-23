@@ -1,0 +1,88 @@
+task_id: gitlab.gl70.error_assessment.verify.level3.v1
+instance_id: gitlab.gl70.error_assessment
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL70
+  review_status: clean_source_inventory_checked
+page:
+  site: gitlab
+  page_name: CI/CD Editor
+  start_url: http://localhost:8023/byteblaze/dotfiles/-/ci/editor?branch_name=main
+scope:
+  assessment_scope: ERROR E.1-E.4
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: gitlab.gl70.e1.commit_message_required_error_not_identified
+    target:
+      selector: textarea#commit-message
+      description: the commit message textarea in the GitLab CI/CD pipeline editor
+      coverage_policy: single
+    criterion:
+      issue_family: error_identification
+      wcag_target: WCAG 3.3.1 Error Identification
+      assessment_requirement: E.1 Error Identification
+      wcag:
+        number: 3.3.1
+        name: Error Identification
+        link_name: WCAG 3.3.1
+        url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+        criterion_text: >-
+          If an input error is automatically detected, the item that is in error is identified
+          and the error is described to the user in text.
+    evidence_rule: >-
+      After Configure pipeline opens the editor, clearing the target commit message textarea
+      makes that required field invalid and disables Commit changes, but the page does not
+      surface inline error text, aria-invalid, aria-describedby, or a non-empty alert/status/live
+      region that identifies the required-field problem. A native validity API message that
+      is not rendered or associated in the page DOM does not rescue this path.
+  - issue_id: gitlab.gl70.e2.commit_message_required_error_without_suggestion
+    target:
+      selector: textarea#commit-message
+      description: the commit message textarea in the GitLab CI/CD pipeline editor
+      coverage_policy: single
+    criterion:
+      issue_family: error_suggestion
+      wcag_target: WCAG 3.3.3 Error Suggestion
+      assessment_requirement: E.2 Error Suggestion
+      wcag:
+        number: 3.3.3
+        name: Error Suggestion
+        link_name: WCAG 3.3.3
+        url: https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html
+        criterion_text: >-
+          If an input error is automatically detected and suggestions for correction are known,
+          then the suggestions are provided to the user, unless it would jeopardize the security
+          or purpose of the content.
+    evidence_rule: >-
+      After Configure pipeline opens the editor, clearing the target commit message textarea
+      makes that required field invalid and disables Commit changes, but the page provides
+      no surfaced correction suggestion telling the user to fill the commit message or explaining
+      how to recover from the blocked commit path. A native validity API message that is not
+      rendered or associated in the page DOM does not rescue this path.
+  - issue_id: gitlab.gl70.e4.status_text_change_without_live_semantics
+    target:
+      selector: .monaco-editor textarea.inputarea[role="textbox"]
+      description: the YAML editor textbox in the GitLab CI/CD pipeline editor
+      coverage_policy: single
+    criterion:
+      issue_family: status_messages
+      wcag_target: WCAG 4.1.3 Status Messages
+      assessment_requirement: E.4 Status Messages
+      wcag:
+        number: 4.1.3
+        name: Status Messages
+        link_name: WCAG 4.1.3
+        url: https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html
+        criterion_text: >-
+          In content implemented using markup languages, status messages can be programmatically
+          determined through role or properties such that they can be presented to the user
+          by assistive technologies without receiving focus.
+    evidence_rule: >-
+      Changing the target YAML editor causes the pipeline validation text at `span[data-testid="validationMsg"]`
+      to become an active same-page success or error status message, but that message node
+      and its relevant ancestors do not expose role, aria-live, or equivalent status-message
+      semantics. Empty nearby live-region nodes that do not carry this validation text do
+      not rescue this message path.

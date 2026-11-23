@@ -1,0 +1,46 @@
+task_id: reddit.rd11.e1.generic_message_not_field_specific.verify.v1
+instance_id: reddit.rd11.e1.generic_message_not_field_specific
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: RD11
+  matched_positive: reddit.rd11.e1.generic_message_not_field_specific
+page:
+  site: reddit
+  page_name: Account
+  start_url: http://localhost:9999/user/MarvelsGrantMan136/account
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 3.3.1 Error Identification
+  - error.e1.generic_message_not_field_specific
+  target:
+    selector: >-
+      input#user_password_first[name="user[password][first]"], input#user_password_second[name="user[password][second]"]
+    description: the New password and repeat password inputs in the Reddit account form
+    coverage_policy: representative_group
+  criterion:
+    issue_family: error_identification
+    wcag_target: WCAG 3.3.1 Error Identification
+    assessment_requirement: E.1 Error Identification
+    wcag:
+      number: 3.3.1
+      name: Error Identification
+      link_name: WCAG 3.3.1
+      url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+      criterion_text: >-
+        If an input error is automatically detected, the item that is in error is identified
+        and the error is described to the user in text.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target/probe: the runtime patch is expected
+    to remediate the same target path so the page no longer lacks user-facing identification
+    for the automatically detected input error. A reported E.1 issue on this matched target
+    is a false alarm for this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported issue on this clean target is a false alarm for this task.
+- Reporting unrelated issues does not count for this task.

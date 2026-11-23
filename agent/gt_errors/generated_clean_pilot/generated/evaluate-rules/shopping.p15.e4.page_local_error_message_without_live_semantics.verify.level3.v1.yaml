@@ -1,0 +1,44 @@
+task_id: shopping.p15.e4.page_local_error_message_without_live_semantics.verify.level3.v1
+instance_id: shopping.p15.e4.page_local_error_message_without_live_semantics
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: P15
+page:
+  site: shopping
+  page_name: Contact Us
+  start_url: http://localhost:7770/contact/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 4.1.3 Status Messages
+  - error.e4.page_local_error_message_without_live_semantics
+  target:
+    selector: form#contact-form input#email
+    description: the Email input in the Magento contact form
+    coverage_policy: single
+  criterion:
+    issue_family: status_messages
+    wcag_target: WCAG 4.1.3 Status Messages
+    assessment_requirement: E.4 Status Messages
+    wcag:
+      number: 4.1.3
+      name: Status Messages
+      link_name: WCAG 4.1.3
+      url: https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html
+      criterion_text: >-
+        In content implemented using markup languages, status messages can be programmatically
+        determined through role or properties such that they can be presented to the user
+        by assistive technologies without receiving focus.
+  evidence_rule: >-
+    Entering an invalid value in the target contact Email input produces active same-page
+    field-level error/status feedback at `div#email-error`, but that message node and its
+    relevant ancestors do not expose role, aria-live, or equivalent status-message semantics.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

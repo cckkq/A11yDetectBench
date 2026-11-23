@@ -1,0 +1,65 @@
+task_id: shopping_admin.pa50.scope_select_context_change.verify.level3.v1
+instance_id: shopping_admin.pa50.scope_select_context_change
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA50
+page:
+  site: shopping_admin
+  page_name: Customer Order Count Report
+  start_url: http://localhost:7780/admin/reports/report_customer/orders/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 3.2.2 On Input
+  - keyboard.on_input.custom_selector_change_triggers_context_change
+  target:
+    selector: button#store-change-button
+    description: the All Websites scope selector button on the customer orders report
+    coverage_policy: single
+  criterion:
+    issue_family: on_input
+    wcag_target: WCAG 3.2.2 On Input
+    assessment_requirement: 1.4 On input
+    ai_web:
+      requirement_key: on-input
+      requirement_name: On input
+      guidance_link_key: WCAG_3_2_2
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/on-input.tsx
+      - accessibility-insights-web-main/src/content/test/keyboard/on-input.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Changing a user interface component setting must not automatically cause a context
+        change unless users are advised before using the component.
+    wcag:
+      number: 3.2.2
+      name: On Input
+      link_name: WCAG 3.2.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/on-input.html
+      criterion_text: >-
+        Changing the setting of any user interface component does not automatically cause
+        a change of context unless the user has been advised of the behavior before using
+        the component.
+  evidence_rule: >-
+    The target control (the All Websites scope selector button on the customer orders report)
+    changes page context, navigation state, result ordering, or equivalent page state immediately
+    after the control value or selection changes, without a separate submit or apply action
+    and without prior warning. Merely opening a menu is not sufficient.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Agent may report one or more findings under Keyboard assessment scope 1.1, 1.2, 1.3, 1.4,
+  and 1.6.
+- >-
+  Pass if at least one reported finding correctly matches the reviewed gold issue for this
+  task.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- >-
+  Reporting other true keyboard issues does not by itself count unless one reported finding
+  matches the reviewed gold issue.

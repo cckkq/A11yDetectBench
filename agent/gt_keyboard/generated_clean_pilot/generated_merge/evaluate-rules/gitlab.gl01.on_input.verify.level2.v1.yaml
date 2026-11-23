@@ -1,0 +1,54 @@
+task_id: gitlab.gl01.on_input.verify.level2.v1
+instance_id: gitlab.gl01.on_input
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL01
+  review_status: current_clean_inventory
+page:
+  site: gitlab
+  page_name: Dashboard
+  start_url: http://localhost:8023/
+scope:
+  issue_family: on_input
+  wcag_target: WCAG 3.2.2 On Input
+  assessment_requirement: 1.4 On input
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: gitlab.gl01.custom_selector_context_change
+    target:
+      selector: button#sort-projects-dropdown
+      description: the project sort dropdown on the GitLab Dashboard
+      coverage_policy: single
+    criterion:
+      issue_family: on_input
+      wcag_target: WCAG 3.2.2 On Input
+      assessment_requirement: 1.4 On input
+      ai_web:
+        requirement_key: on-input
+        requirement_name: On input
+        guidance_link_key: WCAG_3_2_2
+        source_files:
+        - >-
+          accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/on-input.tsx
+        - accessibility-insights-web-main/src/content/test/keyboard/on-input.tsx
+        - accessibility-insights-web-main/src/content/guideline-metadata.ts
+        requirement_text: >-
+          Changing a user interface component setting must not automatically cause a context
+          change unless users are advised before using the component.
+      wcag:
+        number: 3.2.2
+        name: On Input
+        link_name: WCAG 3.2.2
+        url: https://www.w3.org/WAI/WCAG21/Understanding/on-input.html
+        criterion_text: >-
+          Changing the setting of any user interface component does not automatically cause
+          a change of context unless the user has been advised of the behavior before using
+          the component.
+    evidence_rule: >-
+      The target control (the project sort dropdown on the GitLab Dashboard) changes page
+      context, navigation state, result ordering, or equivalent page state immediately after
+      the control value or selection changes, without a separate submit or apply action and
+      without prior warning. Merely opening a menu is not sufficient.

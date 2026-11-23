@@ -1,0 +1,45 @@
+task_id: shopping_admin.pa04.e2.invalid_date_without_expected_format.verify.level3.v1
+instance_id: shopping_admin.pa04.e2.invalid_date_without_expected_format
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA04
+page:
+  site: shopping_admin
+  page_name: Orders
+  start_url: http://localhost:7780/admin/sales/order/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 3.3.3 Error Suggestion
+  - error.e2.invalid_date_without_expected_format
+  target:
+    selector: input[name="created_at[from]"], input[name="created_at[to]"]
+    description: the Purchase Date from/to filter inputs in the Magento Admin Orders grid
+    coverage_policy: representative_group
+  criterion:
+    issue_family: error_suggestion
+    wcag_target: WCAG 3.3.3 Error Suggestion
+    assessment_requirement: E.2 Error Suggestion
+    wcag:
+      number: 3.3.3
+      name: Error Suggestion
+      link_name: WCAG 3.3.3
+      url: https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html
+      criterion_text: >-
+        If an input error is automatically detected and suggestions for correction are known,
+        then the suggestions are provided to the user, unless it would jeopardize the security
+        or purpose of the content.
+  evidence_rule: >-
+    The page detects the Purchase Date filter values as invalid but does not provide an accepted
+    date format, an example date, a placeholder, or another actionable correction direction.
+    The active-filter summary text that reports the invalid date is not itself a correction
+    suggestion.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

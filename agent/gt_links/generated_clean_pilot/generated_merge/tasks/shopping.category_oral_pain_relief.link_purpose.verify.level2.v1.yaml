@@ -1,0 +1,28 @@
+task_id: shopping.category_oral_pain_relief.link_purpose.verify.level2.v1
+instance_id: shopping.category_oral_pain_relief.link_purpose
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_links/generated_clean_pilot/generated_merge/evaluate-rules/shopping.category_oral_pain_relief.link_purpose.verify.level2.v1.yaml
+difficulty: level_2_clause_given_location_hidden
+issue_domain: links
+issue_family: link_purpose
+wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+wcag_source_url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+wcag_clause_text: >-
+  The purpose of each link can be determined from the link text alone or from the link text
+  together with its programmatically determined link context, except where the purpose of
+  the link would be ambiguous to users in general.
+modality_policy: unrestricted_detection
+start_url: http://localhost:7770/beauty-personal-care/oral-care/oral-pain-relief.html
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: any anchor on the Oral Pain Relief Category page
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  issues:
+  - selector: verified CSS selector for the reported anchor, or empty string
+    target: natural-language target description
+    issue_type: link_purpose
+    observed_behavior: concise description of the observed link behavior or accessible-name/context
+      problem
+    evidence: concrete DOM, AX, or interaction facts supporting the issue

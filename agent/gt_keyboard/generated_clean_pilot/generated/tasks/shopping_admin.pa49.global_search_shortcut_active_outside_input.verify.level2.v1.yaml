@@ -1,0 +1,43 @@
+task_id: shopping_admin.pa49.global_search_shortcut_active_outside_input.verify.level2.v1
+instance_id: shopping_admin.pa49.global_search_shortcut_active_outside_input
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_keyboard/generated_clean_pilot/generated/evaluate-rules/shopping_admin.pa49.global_search_shortcut_active_outside_input.verify.level2.v1.yaml
+difficulty: level_2_clause_given_location_hidden
+issue_domain: keyboard
+issue_family: character_key_shortcuts
+wcag_target: WCAG 2.1.4 Character Key Shortcuts
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html
+wcag_clause_text: >-
+  If a keyboard shortcut is implemented in content using only letter (including upper- and
+  lower-case letters), punctuation, number, or symbol characters, then at least one of the
+  following is true: a mechanism is available to turn the shortcut off; a mechanism is available
+  to remap the shortcut to use one or more non-printable keyboard characters; or the keyboard
+  shortcut for a user interface component is only active when that component has focus.
+ai_web:
+  requirement_key: character-key-shortcuts
+  requirement_name: Character key shortcuts
+  guidance_link_key: WCAG_2_1_4
+  source_files:
+  - >-
+    accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/character-key-shortcuts.tsx
+  - accessibility-insights-web-main/src/content/test/keyboard/character-key-shortcuts.tsx
+  - accessibility-insights-web-main/src/content/guideline-metadata.ts
+  requirement_text: >-
+    Single-character keyboard shortcuts must be turn-offable, remappable, or active only when
+    the relevant component has focus.
+modality_policy: keyboard_primary_pointer_confirmation
+start_url: http://localhost:7780/admin/reports/report_customer/totals/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: single printable-character shortcuts on this page
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  issues:
+  - selector: verified CSS selector for the reported keyboard target, or empty string
+    target: natural-language description of the reported keyboard target
+    issue_type: character_key_shortcuts
+    observed_behavior: concise description of the observed keyboard behavior
+    evidence: >-
+      concrete keyboard path, rendered behavior, DOM, or accessibility facts supporting the
+      issue

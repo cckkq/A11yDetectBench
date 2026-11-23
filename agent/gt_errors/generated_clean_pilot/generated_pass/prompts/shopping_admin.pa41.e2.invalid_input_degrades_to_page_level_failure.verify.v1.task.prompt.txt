@@ -1,0 +1,11 @@
+Task: Inspect the From and To date inputs in the Magento Admin Sales Orders Report form for WCAG 3.3.3 Error Suggestion. For this target, enter `abc` in the target From field, enter `13/99/9999` in the target To field, and choose Show Report.
+
+Target selector: `input#sales_report_from[name="from"], input#sales_report_to[name="to"]`
+
+WCAG criterion: If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.
+
+Report a WCAG 3.3.3 error-suggestion issue only if the target path has an automatically detected input error and the page does not provide an actionable correction suggestion.
+
+Do not report the rendered status/error/progress message node, or the submit button when the issue belongs to a field/control.
+
+If the issue is present, use verdict `issue_found`; otherwise use verdict `no_issue_found`.

@@ -1,0 +1,45 @@
+task_id: shopping_admin.pa48.e1.invalid_date_summary_and_generic_failure_mixed.verify.level3.v1
+instance_id: shopping_admin.pa48.e1.invalid_date_summary_and_generic_failure_mixed
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA48
+page:
+  site: shopping_admin
+  page_name: Braintree Settlement Report
+  start_url: http://localhost:7780/admin/braintree/report/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 3.3.1 Error Identification
+  - error.e1.invalid_date_summary_and_generic_failure_mixed
+  target:
+    selector: input[name="createdAt[from]"], input[name="createdAt[to]"]
+    description: >-
+      the Created At from/to filter inputs in the Magento Admin Braintree Settlement Report
+      grid
+    coverage_policy: representative_group
+  criterion:
+    issue_family: error_identification
+    wcag_target: WCAG 3.3.1 Error Identification
+    assessment_requirement: E.1 Error Identification
+    wcag:
+      number: 3.3.1
+      name: Error Identification
+      link_name: WCAG 3.3.1
+      url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+      criterion_text: >-
+        If an input error is automatically detected, the item that is in error is identified
+        and the error is described to the user in text.
+  evidence_rule: >-
+    The invalid Created At filter path is handled only by a generic invalid-date summary or
+    a generic failure flow, rather than identifying the specific target filter field relation
+    and describing the input error to the user in understandable text.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

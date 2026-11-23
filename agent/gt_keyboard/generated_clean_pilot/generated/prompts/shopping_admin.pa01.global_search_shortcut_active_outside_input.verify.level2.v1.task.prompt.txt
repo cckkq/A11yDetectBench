@@ -1,0 +1,9 @@
+Task: Inspect single printable-character shortcuts on this page for Accessibility Insights Character key shortcuts.
+
+WCAG reference: WCAG 2.1.4 Character Key Shortcuts - If a keyboard shortcut is implemented in content using only letter (including upper- and lower-case letters), punctuation, number, or symbol characters, then at least one of the following is true: a mechanism is available to turn the shortcut off; a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters; or the keyboard shortcut for a user interface component is only active when that component has focus.
+
+Report a WCAG 2.1.4 character-key-shortcut issue for each target where a single printable-character shortcut is active when focus is outside an editable target, and the shortcut cannot be turned off, remapped, or limited to focus on the target.
+
+Verify the shortcut by placing focus outside editable targets and outside the relevant component, pressing the single printable character, and checking whether the shortcut fires without an available off, remap, or focus-only mechanism. Pointer interaction may be used only to reveal or cross-check the target or settings, not as proof that the shortcut is compliant. Do not rely on source-code inspection alone.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

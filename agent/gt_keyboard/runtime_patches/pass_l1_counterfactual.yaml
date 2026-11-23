@@ -1,0 +1,102 @@
+version: 1
+scope: keyboard_pass_l1_counterfactual
+patches:
+  gitlab.gl01.custom_selector_context_change:
+    kind: gitlab_sort_dropdown_pending_apply
+    selector: button#sort-projects-dropdown
+    menu_selector: '#project-filter-form .js-project-filter-dropdown-wrap .dropdown-menu a[href*=sort]'
+    apply_label: Apply sort
+  gitlab.gl11.collapse_sidebar_not_tabbable:
+    kind: gitlab_sidebar_toggle_keyboard_repair
+    selector: aside a[role="button"][title="Toggle sidebar"]
+  gitlab.gl12.collapse_sidebar_not_tabbable:
+    kind: gitlab_sidebar_toggle_keyboard_repair
+    selector: aside a[role="button"][title="Toggle sidebar"]
+  gitlab.gl15.datepicker_month_switch_not_keyboard_reachable:
+    kind: gitlab_pika_single_datepicker_keyboard_repair
+    selector: .pika-single .pika-prev, .pika-single .pika-next
+    input_selector: '#personal_access_token_expires_at'
+    keep_observer: true
+  gitlab.gl27.filtered_search_token_not_tabbable:
+    kind: gitlab_filtered_search_token_keyboard_repair
+    selector: .filtered-search-token.search-token-assignee
+    keep_observer: true
+  gitlab.gl28.filtered_search_token_not_tabbable:
+    kind: gitlab_filtered_search_token_keyboard_repair
+    selector: .filtered-search-token.search-token-assignee
+    keep_observer: true
+  gitlab.gl82.datepicker_month_switch_not_keyboard_reachable:
+    kind: gitlab_pika_range_datepicker_keyboard_repair
+    selector: .pika-single:not(.is-hidden) .pika-prev, .pika-single:not(.is-hidden) .pika-next
+    root_selector: .gl-datepicker
+    keep_observer: true
+  gitlab.gl83.chart_legend_buttons_not_tabbable:
+    kind: gitlab_chart_legend_keyboard_repair
+    selector: .gl-legend-inline .gl-legend-inline-series[role="button"]
+  reddit.rd02.submissions_toggle_context_change:
+    kind: reddit_sort_dropdown_pending_apply
+    selector: 'button[aria-label="Sort by: Submissions"]'
+  reddit.rd14.hot_toggle_context_change:
+    kind: reddit_sort_dropdown_pending_apply
+    selector: 'button[aria-label="Sort by: Hot"]'
+  shopping.p02.select_limiter:
+    kind: native_select_pending_apply
+    selector: select#limiter
+  shopping.p16.product_image_link_not_tabbable:
+    kind: make_focusable_clickable
+    selector: .products-grid a.product.photo.product-item-photo
+  shopping.p16.select_sorter:
+    kind: native_select_pending_apply
+    selector: select#sorter
+  shopping_admin.pa01.global_search_shortcut_active_outside_input:
+    kind: global_shortcut_scope_limit
+    selector: input#search-global
+    blocked_keys: ['/', '?']
+  shopping_admin.pa01.store_view_context_change:
+    kind: activation_pending_apply
+    selector: button#store-change-button
+  shopping_admin.pa02.page_limit_context_change:
+    kind: native_select_pending_apply
+    selector: select#notificationGrid_page-limit
+  shopping_admin.pa04.grid_toolbar_expanded_menu_items_not_tabbable:
+    kind: magento_grid_actions_menu_keyboard_repair
+    selector: .admin__data-grid-header .action-menu-item
+    keep_observer: true
+  shopping_admin.pa05.grid_toolbar_expanded_menu_items_not_tabbable:
+    kind: magento_grid_actions_menu_keyboard_repair
+    selector: .admin__data-grid-header .action-menu-item
+    keep_observer: true
+  shopping_admin.pa08.datepicker_month_switch_not_keyboard_reachable:
+    kind: datepicker_nav_keyboard_repair
+    selector: '#ui-datepicker-div .ui-datepicker-prev, #ui-datepicker-div .ui-datepicker-next'
+    keep_observer: true
+  shopping_admin.pa11.category_tree_not_keyboard_reachable:
+    kind: make_focusable_clickable
+    selector: '#tree-div a'
+  shopping_admin.pa11.collapsible_panel_expanded_content_partially_not_tabbable:
+    kind: datepicker_nav_keyboard_repair
+    selector: '#ui-datepicker-div .ui-datepicker-prev, #ui-datepicker-div .ui-datepicker-next'
+    keep_observer: true
+  shopping_admin.pa49.global_search_shortcut_active_outside_input:
+    kind: global_shortcut_scope_limit
+    selector: input#search-global
+    blocked_keys: ['/', '?']
+  shopping_admin.pa49.scope_select_context_change:
+    kind: activation_pending_apply
+    selector: button#store-change-button
+  shopping_admin.pa50.datepicker_month_switch_not_keyboard_reachable:
+    kind: datepicker_nav_keyboard_repair
+    selector: '#ui-datepicker-div .ui-datepicker-prev, #ui-datepicker-div .ui-datepicker-next'
+    keep_observer: true
+  shopping_admin.pa50.scope_select_context_change:
+    kind: activation_pending_apply
+    selector: button#store-change-button
+  shopping_admin.pa60.page_limit_context_change:
+    kind: native_select_pending_apply
+    selector: select#agreementGrid_page-limit
+  shopping_admin.pa68.mouse_operable_data_row_controls_not_tabbable:
+    kind: make_focusable_clickable
+    selector: '#attributeGrid_table tbody tr[title]'
+  shopping_admin.pa69.mouse_operable_data_row_controls_not_tabbable:
+    kind: make_focusable_clickable
+    selector: '#setGrid_table tbody tr[title]'

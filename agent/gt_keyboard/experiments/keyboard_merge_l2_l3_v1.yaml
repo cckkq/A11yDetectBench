@@ -1,0 +1,119 @@
+experiment_id: keyboard_merge_l2_l3_v1
+description: Keyboard MERGE clean page/family L2 and page-scope L3 set, repeats=3.
+
+defaults:
+  task_root: agent/gt_keyboard/generated_clean_pilot/generated_merge/tasks
+  levels:
+    - verify.level2.v1
+    - verify.level3.v1
+  max_steps: 25
+  repeats: 3
+
+sites:
+  gitlab:
+    - task_base: gitlab.gl01.on_input
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl01.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.gl11.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl11.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.gl12.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl12.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.gl15.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl15.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.gl27.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl27.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.gl28.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl28.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.gl82.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl82.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.gl83.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: gitlab.gl83.keyboard_assessment
+      levels: [verify.level3.v1]
+
+  reddit:
+    - task_base: reddit.rd02.on_input
+      levels: [verify.level2.v1]
+    - task_base: reddit.rd02.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: reddit.rd14.on_input
+      levels: [verify.level2.v1]
+    - task_base: reddit.rd14.keyboard_assessment
+      levels: [verify.level3.v1]
+
+  shopping:
+    - task_base: shopping.p02.on_input
+      levels: [verify.level2.v1]
+    - task_base: shopping.p02.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.p16.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping.p16.on_input
+      levels: [verify.level2.v1]
+    - task_base: shopping.p16.keyboard_assessment
+      levels: [verify.level3.v1]
+
+  shopping_admin:
+    - task_base: shopping_admin.pa01.character_key_shortcuts
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa01.on_input
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa01.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa02.on_input
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa02.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa04.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa04.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa05.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa05.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa08.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa08.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa11.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa11.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa49.character_key_shortcuts
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa49.on_input
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa49.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa50.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa50.on_input
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa50.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa60.on_input
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa60.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa68.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa68.keyboard_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.pa69.keyboard_nonreachable
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.pa69.keyboard_assessment
+      levels: [verify.level3.v1]

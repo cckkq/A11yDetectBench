@@ -1,0 +1,41 @@
+task_id: shopping.downloadable_customer_products.link_purpose.verify.level2.v1
+instance_id: shopping.downloadable_customer_products.link_purpose
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: P03
+  review_status: source_and_live_checked
+page:
+  site: shopping
+  page_name: Downloadable Products
+  start_url: http://localhost:7770/downloadable/customer/products/
+scope:
+  issue_family: link_purpose
+  wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  assessment_requirement: L.2 Link Purpose
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping.p03.lp.generic_view_all_without_programmatic_context
+    target:
+      selector: .block-reorder a.action.view
+      description: the `View All` anchor element in the Recently Ordered block
+      coverage_policy: single
+    criterion:
+      issue_family: link_purpose
+      wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+      assessment_requirement: L.2 Link Purpose
+      wcag:
+        number: 2.4.4
+        name: Link Purpose (In Context)
+        link_name: Link Purpose (In Context)
+        url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+        criterion_text: >-
+          The purpose of each link can be determined from the link text alone or from the
+          link text together with its programmatically determined link context, except where
+          the purpose of the link would be ambiguous to users in general.
+    evidence_rule: >-
+      The matched link is named only `View All`. The visible `Recently Ordered` block title
+      is not exposed through the link name, description, ARIA association, same sentence,
+      same paragraph, same list item, or same table cell.

@@ -1,0 +1,48 @@
+task_id: shopping_admin.pa20.e4.progress_scene_without_live_semantics.verify.v1
+instance_id: shopping_admin.pa20.e4.progress_scene_without_live_semantics
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA20
+  matched_positive: shopping_admin.pa20.e4.progress_scene_without_live_semantics
+page:
+  site: shopping_admin
+  page_name: Newsletter Subscribers
+  start_url: http://localhost:7780/admin/newsletter/subscriber/
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 4.1.3 Status Messages
+  - error.e4.progress_scene_without_live_semantics
+  target:
+    selector: '#subscriberGrid button[title="Search"][data-action="grid-filter-apply"]'
+    description: the Search action in the Magento Admin Newsletter Subscribers grid
+    coverage_policy: single
+  criterion:
+    issue_family: status_messages
+    wcag_target: WCAG 4.1.3 Status Messages
+    assessment_requirement: E.4 Status Messages
+    wcag:
+      number: 4.1.3
+      name: Status Messages
+      link_name: WCAG 4.1.3
+      url: https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html
+      criterion_text: >-
+        In content implemented using markup languages, status messages can be programmatically
+        determined through role or properties such that they can be presented to the user
+        by assistive technologies without receiving focus.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target/probe: the runtime patch is expected
+    to remediate the same `Please wait...` loading/progress scene so it is programmatically
+    exposed through role, aria-live, or equivalent status-message semantics. Ordinary grid
+    result or empty-state text such as `0 records found` or `We couldn't find any records.`
+    is not the target scene for this task. A reported E.4 issue on the matched loading-mask
+    target is a false alarm for this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported issue on this clean target is a false alarm for this task.
+- Reporting unrelated issues does not count for this task.

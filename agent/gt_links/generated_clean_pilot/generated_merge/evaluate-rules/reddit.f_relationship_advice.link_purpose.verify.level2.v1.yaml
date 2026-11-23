@@ -1,0 +1,64 @@
+task_id: reddit.f_relationship_advice.link_purpose.verify.level2.v1
+instance_id: reddit.f_relationship_advice.link_purpose
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: RD17
+  review_status: source_and_live_checked
+page:
+  site: reddit
+  page_name: Relationship Advice Forum
+  start_url: http://localhost:9999/f/relationship_advice
+scope:
+  issue_family: link_purpose
+  wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  assessment_requirement: L.2 Link Purpose
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: reddit.rd17.lp.comment_count_link_without_post_context
+    target:
+      selector: article.submission a.text-sm[href^='/f/']:has(> strong)
+      description: the twenty-five per-submission comment-count links in the relationship_advice
+        listing
+      coverage_policy: representative_group
+    criterion:
+      issue_family: link_purpose
+      wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+      assessment_requirement: L.2 Link Purpose
+      wcag:
+        number: 2.4.4
+        name: Link Purpose (In Context)
+        link_name: Link Purpose (In Context)
+        url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+        criterion_text: >-
+          The purpose of each link can be determined from the link text alone or from the
+          link text together with its programmatically determined link context, except where
+          the purpose of the link would be ambiguous to users in general.
+    evidence_rule: >-
+      The matched links have names such as `N comments`. Each link navigates to a different
+      submission/comment page, but the link name does not identify which post it belongs to,
+      and the post title is not provided as programmatically determined link context.
+  - issue_id: reddit.rd17.lp.generic_more_link_without_list_context
+    target:
+      selector: a.button[rel='next']
+      description: the `More` pagination anchor element at the bottom of the relationship_advice
+        listing
+      coverage_policy: single
+    criterion:
+      issue_family: link_purpose
+      wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+      assessment_requirement: L.2 Link Purpose
+      wcag:
+        number: 2.4.4
+        name: Link Purpose (In Context)
+        link_name: Link Purpose (In Context)
+        url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+        criterion_text: >-
+          The purpose of each link can be determined from the link text alone or from the
+          link text together with its programmatically determined link context, except where
+          the purpose of the link would be ambiguous to users in general.
+    evidence_rule: >-
+      The matched link name is only `More`. It does not programmatically identify that it
+      continues or loads more items from the relationship_advice listing.

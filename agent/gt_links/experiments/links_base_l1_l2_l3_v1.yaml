@@ -1,0 +1,71 @@
+experiment_id: links_base_l1_l2_l3_v1
+description: Links BASE clean/schema issue-instance set across L1/L2/L3, repeats=3.
+
+defaults:
+  task_root: agent/gt_links/generated_clean_pilot/generated/tasks
+  levels:
+    - verify.v1
+    - verify.level2.v1
+    - verify.level3.v1
+  max_steps: 25
+  repeats: 3
+
+sites:
+  gitlab:
+    - task_base: gitlab.gl01.lf.create_new_dropdown_anchor_without_widget_role
+    - task_base: gitlab.gl01.lf.merge_requests_dropdown_anchor_without_widget_role
+    - task_base: gitlab.gl02.lp.dashboard_projects_view_all_without_section_context
+    - task_base: gitlab.gl02.lp.profile_rss_subscribe_anchor_without_target_context
+    - task_base: gitlab.gl03.lp.empty_gravatar_avatar_anchor_without_name
+    - task_base: gitlab.gl06.lp.empty_gravatar_avatar_anchor_without_name
+    - task_base: gitlab.gl11.lp.empty_help_icon_anchor_without_name
+    - task_base: gitlab.gl24.lp.empty_markdown_heading_permalink_anchor_without_name
+    - task_base: gitlab.gl50.lp.dashboard_activity_rss_subscribe_anchor_without_target_context
+    - task_base: gitlab.gl95.lf.create_new_dropdown_anchor_without_widget_role
+    - task_base: gitlab.gl95.lf.merge_requests_dropdown_anchor_without_widget_role
+    - task_base: gitlab.gl99.lp.empty_help_icon_anchor_without_name
+
+  reddit:
+    - task_base: reddit.rd06.lf.reply_anchor_inserts_form_without_widget_role
+    - task_base: reddit.rd10.lp.comment_count_link_without_post_context
+    - task_base: reddit.rd14.lp.generic_more_link_without_list_context
+    - task_base: reddit.rd15.lf.reply_anchor_inserts_form_without_widget_role
+    - task_base: reddit.rd15.lp.comment_parent_without_comment_context
+    - task_base: reddit.rd15.lp.comment_permalink_without_comment_context
+    - task_base: reddit.rd15.lp.comment_reply_without_comment_context
+    - task_base: reddit.rd17.lp.comment_count_link_without_post_context
+    - task_base: reddit.rd17.lp.generic_more_link_without_list_context
+    - task_base: reddit.rd18.lp.comment_parent_without_comment_context
+    - task_base: reddit.rd18.lp.comment_permalink_without_comment_context
+    - task_base: reddit.rd18.lp.comment_reply_without_comment_context
+    - task_base: reddit.rd20.lp.opaque_inline_external_link_text
+
+  shopping:
+    - task_base: shopping.p01.lp.order_reorder_without_row_header_context
+    - task_base: shopping.p01.lp.order_view_order_without_row_header_context
+    - task_base: shopping.p02.lp.order_reorder_without_row_header_context
+    - task_base: shopping.p02.lp.order_view_order_without_row_header_context
+    - task_base: shopping.p03.lp.generic_view_all_without_programmatic_context
+    - task_base: shopping.p10.lf.product_detail_panel_tab_anchor_without_widget_role
+    - task_base: shopping.p19.lf.compare_page_print_command_anchor
+    - task_base: shopping.p19.lf.compare_page_remove_product_command_anchor
+    - task_base: shopping.p20.lf.compare_page_print_command_anchor
+    - task_base: shopping.p20.lf.compare_page_remove_product_command_anchor
+    - task_base: shopping.p21.lp.generic_view_all_without_programmatic_context
+    - task_base: shopping.p22.lf.product_detail_panel_tab_anchor_without_widget_role
+    - task_base: shopping.p29.lf.home_product_card_add_to_compare_command_anchor
+
+  shopping_admin:
+    - task_base: shopping_admin.pa01.lp.tooltip_help_what_is_this_without_target_context
+    - task_base: shopping_admin.pa02.lp.notification_read_details_without_row_context
+    - task_base: shopping_admin.pa02.lp.notification_remove_without_row_context
+    - task_base: shopping_admin.pa03.lf.left_nav_disclosure_anchor_without_widget_role
+    - task_base: shopping_admin.pa04.lp.order_grid_view_without_row_context
+    - task_base: shopping_admin.pa40.lp.product_reviews_show_reviews_without_row_context
+    - task_base: shopping_admin.pa46.lp.tooltip_help_what_is_this_without_target_context
+    - task_base: shopping_admin.pa61.lf.order_status_unassign_data_post_anchor
+    - task_base: shopping_admin.pa62.lp.source_grid_edit_without_row_context
+    - task_base: shopping_admin.pa75.lp.integration_reauthorize_without_row_context
+    - task_base: shopping_admin.pa76.lf.left_nav_disclosure_anchor_without_widget_role
+    - task_base: shopping_admin.pa82.lp.notification_read_details_without_row_context
+    - task_base: shopping_admin.pa82.lp.notification_remove_without_row_context

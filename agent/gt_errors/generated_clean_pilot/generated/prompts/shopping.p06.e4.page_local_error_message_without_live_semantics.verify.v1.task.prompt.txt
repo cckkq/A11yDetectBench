@@ -1,0 +1,11 @@
+Task: Inspect the First Name input in the Magento account edit form for WCAG 4.1.3 Status Messages. For this target, clear the target First Name input and save the account form.
+
+Target selector: `input#firstname`
+
+WCAG criterion: In content implemented using markup languages, status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus.
+
+Report a WCAG 4.1.3 status-messages issue only if the target interaction triggers an active same-page status message and that message is not programmatically exposed through role, aria-live, or equivalent status-message semantics.
+
+Do not report the rendered status/error/progress message node, or the submit button when the issue belongs to a field/control.
+
+If the issue is present, use verdict `issue_found`; otherwise use verdict `no_issue_found`.

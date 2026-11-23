@@ -1,0 +1,9 @@
+Task: Inspect the Details and Reviews product information tab anchors for WCAG 4.1.2 Name, Role, Value.
+
+Target selector: `.product.data.items a.data.switch`
+
+WCAG criterion: For all user interface components, the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.
+
+Report a WCAG 4.1.2 link-function issue only if a target anchor element is exposed as a link but activation performs an in-place control or command instead of taking the user to link content, a page location, or a resource.
+
+If the issue is present, use verdict `issue_found`; otherwise use verdict `no_issue_found`.

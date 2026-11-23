@@ -1,0 +1,54 @@
+task_id: shopping_admin.pa69.keyboard_nonreachable.verify.level2.v1
+instance_id: shopping_admin.pa69.keyboard_nonreachable
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA69
+  review_status: current_clean_inventory
+page:
+  site: shopping_admin
+  page_name: Attribute Sets
+  start_url: http://localhost:7780/admin/catalog/product_set/
+scope:
+  issue_family: keyboard_nonreachable
+  wcag_target: WCAG 2.1.1 Keyboard
+  assessment_requirement: 1.1 Keyboard navigation
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping_admin.pa69.mouse_operable_data_row_controls_not_tabbable
+    target:
+      selector: '#setGrid_table tbody tr[title]'
+      description: the pointer-operable Attribute Sets grid rows
+      coverage_policy: representative_group
+    criterion:
+      issue_family: keyboard_nonreachable
+      wcag_target: WCAG 2.1.1 Keyboard
+      assessment_requirement: 1.1 Keyboard navigation
+      ai_web:
+        requirement_key: keyboard-navigation
+        requirement_name: Keyboard navigation
+        guidance_link_key: WCAG_2_1_1
+        source_files:
+        - >-
+          accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/keyboard-navigation.tsx
+        - accessibility-insights-web-main/src/content/test/keyboard/keyboard-navigation.tsx
+        - accessibility-insights-web-main/src/content/guideline-metadata.ts
+        requirement_text: Users must be able to navigate to all interactive interface components
+          using a keyboard.
+      wcag:
+        number: 2.1.1
+        name: Keyboard
+        link_name: WCAG 2.1.1
+        url: https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html
+        criterion_text: >-
+          All functionality of the content is operable through a keyboard interface without
+          requiring specific timings for individual keystrokes, except where the underlying
+          function requires input that depends on the path of the user's movement and not
+          just the endpoints.
+    evidence_rule: >-
+      The target (the pointer-operable Attribute Sets grid rows) is visible and pointer-operable
+      or part of an active widget, but expected keyboard navigation cannot reach or complete
+      operation of that same target. Reporting a different keyboard issue on the page does
+      not satisfy this rule.

@@ -1,0 +1,40 @@
+task_id: shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift.verify.level2.v1
+instance_id: shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_focus/generated_clean_pilot/generated/evaluate-rules/shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift.verify.level2.v1.yaml
+difficulty: level_2_clause_given_location_hidden
+issue_domain: focus
+issue_family: revealing_content
+wcag_target: WCAG 2.4.3 Focus Order
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html
+wcag_clause_text: >-
+  If a Web page can be navigated sequentially and the navigation sequences affect meaning
+  or operation, focusable components receive focus in an order that preserves meaning and
+  operability.
+ai_web:
+  requirement_key: revealing-content
+  requirement_name: Revealing content
+  guidance_link_key: WCAG_2_4_3
+  source_files:
+  - >-
+    accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/revealing-content.tsx
+  - accessibility-insights-web-main/src/content/test/focus/revealing-content.tsx
+  - accessibility-insights-web-main/src/content/guideline-metadata.ts
+  requirement_text: >-
+    Activating a component that reveals hidden content must move input focus into the revealed
+    content.
+modality_policy: keyboard_primary_pointer_confirmation
+start_url: http://localhost:7780/admin/catalog/product/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: components that reveal hidden content on this page
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  issues:
+  - selector: verified CSS selector for the reported focus target, or empty string
+    target: natural-language description of the reported focus target
+    issue_type: revealing_content
+    observed_behavior: concise description of the observed focus behavior
+    evidence: concrete keyboard path, rendered state, DOM, or accessibility facts supporting
+      the issue

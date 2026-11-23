@@ -1,0 +1,46 @@
+experiment_id: keyboard_pass_l1_v1
+description: Keyboard PASS L1 counterfactual set with runtime patches, repeats=3.
+
+defaults:
+  task_root: agent/gt_keyboard/generated_clean_pilot/generated_pass/tasks
+  levels:
+    - verify.v1
+  max_steps: 25
+  repeats: 3
+
+sites:
+  gitlab:
+    - task_base: gitlab.gl01.custom_selector_context_change
+    - task_base: gitlab.gl11.collapse_sidebar_not_tabbable
+    - task_base: gitlab.gl12.collapse_sidebar_not_tabbable
+    - task_base: gitlab.gl15.datepicker_month_switch_not_keyboard_reachable
+    - task_base: gitlab.gl27.filtered_search_token_not_tabbable
+    - task_base: gitlab.gl28.filtered_search_token_not_tabbable
+    - task_base: gitlab.gl82.datepicker_month_switch_not_keyboard_reachable
+    - task_base: gitlab.gl83.chart_legend_buttons_not_tabbable
+
+  reddit:
+    - task_base: reddit.rd02.submissions_toggle_context_change
+    - task_base: reddit.rd14.hot_toggle_context_change
+
+  shopping:
+    - task_base: shopping.p02.select_limiter
+    - task_base: shopping.p16.product_image_link_not_tabbable
+    - task_base: shopping.p16.select_sorter
+
+  shopping_admin:
+    - task_base: shopping_admin.pa01.global_search_shortcut_active_outside_input
+    - task_base: shopping_admin.pa01.store_view_context_change
+    - task_base: shopping_admin.pa02.page_limit_context_change
+    - task_base: shopping_admin.pa04.grid_toolbar_expanded_menu_items_not_tabbable
+    - task_base: shopping_admin.pa05.grid_toolbar_expanded_menu_items_not_tabbable
+    - task_base: shopping_admin.pa08.datepicker_month_switch_not_keyboard_reachable
+    - task_base: shopping_admin.pa11.category_tree_not_keyboard_reachable
+    - task_base: shopping_admin.pa11.collapsible_panel_expanded_content_partially_not_tabbable
+    - task_base: shopping_admin.pa49.global_search_shortcut_active_outside_input
+    - task_base: shopping_admin.pa49.scope_select_context_change
+    - task_base: shopping_admin.pa50.datepicker_month_switch_not_keyboard_reachable
+    - task_base: shopping_admin.pa50.scope_select_context_change
+    - task_base: shopping_admin.pa60.page_limit_context_change
+    - task_base: shopping_admin.pa68.mouse_operable_data_row_controls_not_tabbable
+    - task_base: shopping_admin.pa69.mouse_operable_data_row_controls_not_tabbable

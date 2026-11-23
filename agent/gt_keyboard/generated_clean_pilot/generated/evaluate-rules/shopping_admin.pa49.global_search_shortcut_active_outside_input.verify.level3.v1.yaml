@@ -1,0 +1,70 @@
+task_id: shopping_admin.pa49.global_search_shortcut_active_outside_input.verify.level3.v1
+instance_id: shopping_admin.pa49.global_search_shortcut_active_outside_input
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+    agent/gt/issue-instances/shopping_admin.pa49.global_search_shortcut_active_outside_input.md
+  page_id: PA49
+page:
+  site: shopping_admin
+  page_name: Customer Order Total Report
+  start_url: http://localhost:7780/admin/reports/report_customer/totals/
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 2.1.4 Character Key Shortcuts
+  - keyboard.character_key.global_search_shortcut_active_outside_input
+  target:
+    selector: input#search-global
+    description: >-
+      the Magento Admin global search input targeted by shortcuts on the customer totals report
+    coverage_policy: single
+  criterion:
+    issue_family: character_key_shortcuts
+    wcag_target: WCAG 2.1.4 Character Key Shortcuts
+    assessment_requirement: 1.6 Character key shortcuts
+    ai_web:
+      requirement_key: character-key-shortcuts
+      requirement_name: Character key shortcuts
+      guidance_link_key: WCAG_2_1_4
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/character-key-shortcuts.tsx
+      - accessibility-insights-web-main/src/content/test/keyboard/character-key-shortcuts.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Single-character keyboard shortcuts must be turn-offable, remappable, or active only
+        when the relevant component has focus.
+    wcag:
+      number: 2.1.4
+      name: Character Key Shortcuts
+      link_name: WCAG 2.1.4
+      url: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html
+      criterion_text: >-
+        If a keyboard shortcut is implemented in content using only letter (including upper-
+        and lower-case letters), punctuation, number, or symbol characters, then at least
+        one of the following is true: a mechanism is available to turn the shortcut off; a
+        mechanism is available to remap the shortcut to use one or more non-printable keyboard
+        characters; or the keyboard shortcut for a user interface component is only active
+        when that component has focus.
+  evidence_rule: >-
+    Pressing / or ? while focus is outside an editable field moves focus to the Magento Admin
+    global search input targeted by shortcuts on the customer totals report. The task path
+    does not expose a way to turn off, remap, or limit that single-character shortcut to cases
+    where the search input already has focus.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Agent may report one or more findings under Keyboard assessment scope 1.1, 1.2, 1.3, 1.4,
+  and 1.6.
+- >-
+  Pass if at least one reported finding correctly matches the reviewed gold issue for this
+  task.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- >-
+  Reporting other true keyboard issues does not by itself count unless one reported finding
+  matches the reviewed gold issue.

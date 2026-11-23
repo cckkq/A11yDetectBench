@@ -1,0 +1,32 @@
+experiment_id: focus_pass_l1_v1
+description: Focus PASS L1 counterfactual set with runtime patches, repeats=3.
+
+defaults:
+  task_root: agent/gt_focus/generated_clean_pilot/generated_pass/tasks
+  levels:
+    - verify.v1
+  max_steps: 25
+  repeats: 3
+
+sites:
+  gitlab:
+    - task_base: gitlab.gl01.f21t3.project_initial_avatar_links_no_visible_focus
+    - task_base: gitlab.gl01.f21t4.explore_tab_controls_no_visible_focus
+    - task_base: gitlab.gl02.f21t3.project_initial_avatar_links_no_visible_focus
+    - task_base: gitlab.gl96.f21t4.explore_tab_controls_no_visible_focus
+
+  shopping:
+    - task_base: shopping.p16.f21t10.header_menu_expanded_item_no_visible_focus
+    - task_base: shopping.p29.f21t10.header_menu_expanded_item_no_visible_focus
+
+  shopping_admin:
+    - task_base: shopping_admin.pa02.f21t6a.grid_small_selectors_no_visible_focus
+    - task_base: shopping_admin.pa04.f21t6a.grid_small_selectors_no_visible_focus
+    - task_base: shopping_admin.pa08.f21t1.datepicker_trigger_no_visible_focus
+    - task_base: shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift
+    - task_base: shopping_admin.pa15.f21t1.datepicker_trigger_no_visible_focus
+    - task_base: shopping_admin.pa15.f21t6b.admin_action_buttons_no_visible_focus
+    - task_base: shopping_admin.pa27.f21t6c.filter_dropdown_subcontrols_no_visible_focus
+    - task_base: shopping_admin.pa58.f21t6b.admin_action_buttons_no_visible_focus
+    - task_base: shopping_admin.pa62.f21t6c.filter_dropdown_subcontrols_no_visible_focus
+    - task_base: shopping_admin.pa75.f21t6b.admin_action_buttons_no_visible_focus

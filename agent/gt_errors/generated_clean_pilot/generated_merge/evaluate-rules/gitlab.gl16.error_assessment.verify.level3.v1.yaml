@@ -1,0 +1,40 @@
+task_id: gitlab.gl16.error_assessment.verify.level3.v1
+instance_id: gitlab.gl16.error_assessment
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL16
+  review_status: clean_source_inventory_checked
+page:
+  site: gitlab
+  page_name: Emails
+  start_url: http://localhost:8023/-/profile/emails
+scope:
+  assessment_scope: ERROR E.1-E.4
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: gitlab.gl16.e2.rule_violation_without_actionable_suggestion
+    target:
+      selector: input#email_email[name="email[email]"]
+      description: the add-email input in the GitLab Emails settings form
+      coverage_policy: single
+    criterion:
+      issue_family: error_suggestion
+      wcag_target: WCAG 3.3.3 Error Suggestion
+      assessment_requirement: E.2 Error Suggestion
+      wcag:
+        number: 3.3.3
+        name: Error Suggestion
+        link_name: WCAG 3.3.3
+        url: https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html
+        criterion_text: >-
+          If an input error is automatically detected and suggestions for correction are known,
+          then the suggestions are provided to the user, unless it would jeopardize the security
+          or purpose of the content.
+    evidence_rule: >-
+      The page detects the add-email value as invalid but does not provide an accepted email
+      format, an example email address, an alternate address recovery direction, or another
+      actionable correction direction. Other better validation paths on the same page do not
+      rescue this add-email path.

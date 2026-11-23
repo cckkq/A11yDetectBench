@@ -1,0 +1,46 @@
+task_id: gitlab.gl44.e4.personal_access_token_error_text_without_live_semantics.verify.v1
+instance_id: gitlab.gl44.e4.personal_access_token_error_text_without_live_semantics
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL44
+  matched_positive: gitlab.gl44.e4.personal_access_token_error_text_without_live_semantics
+page:
+  site: gitlab
+  page_name: New Group Import Group Pane
+  start_url: http://localhost:8023/groups/new#import-group-pane
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 4.1.3 Status Messages
+  - error.e4.field_level_error_text_without_live_semantics
+  target:
+    selector: input#import_gitlab_token[name="bulk_import_gitlab_access_token"]
+    description: the Personal access token input in the GitLab import group form
+    coverage_policy: single
+  criterion:
+    issue_family: status_messages
+    wcag_target: WCAG 4.1.3 Status Messages
+    assessment_requirement: E.4 Status Messages
+    wcag:
+      number: 4.1.3
+      name: Status Messages
+      link_name: WCAG 4.1.3
+      url: https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html
+      criterion_text: >-
+        In content implemented using markup languages, status messages can be programmatically
+        determined through role or properties such that they can be presented to the user
+        by assistive technologies without receiving focus.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target/probe: the runtime patch is expected
+    to remediate the same target interaction so the triggered same-page status, error, or
+    progress message is programmatically exposed through role, aria-live, or equivalent status-message
+    semantics. A reported E.4 issue on this matched target is a false alarm for this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported issue on this clean target is a false alarm for this task.
+- Reporting unrelated issues does not count for this task.

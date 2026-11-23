@@ -1,0 +1,175 @@
+experiment_id: links_merge_l2_l3_v1
+description: Links MERGE clean page/family L2 and page-scope L3 set, repeats=3.
+
+defaults:
+  task_root: agent/gt_links/generated_clean_pilot/generated_merge/tasks
+  levels:
+    - verify.level2.v1
+    - verify.level3.v1
+  max_steps: 25
+  repeats: 3
+
+sites:
+  gitlab:
+    - task_base: gitlab.byteblaze.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: gitlab.byteblaze.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.dashboard_activity.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: gitlab.dashboard_activity.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.explore.link_function
+      levels: [verify.level2.v1]
+    - task_base: gitlab.explore.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.help.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: gitlab.help.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.profile.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: gitlab.profile.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.root.link_function
+      levels: [verify.level2.v1]
+    - task_base: gitlab.root.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.snippets_new.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: gitlab.snippets_new.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.users_byteblaze_activity.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: gitlab.users_byteblaze_activity.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: gitlab.users_byteblaze_projects.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: gitlab.users_byteblaze_projects.links_assessment
+      levels: [verify.level3.v1]
+
+  reddit:
+    - task_base: reddit.comments.link_function
+      levels: [verify.level2.v1]
+    - task_base: reddit.comments.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: reddit.comments.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: reddit.f_askreddit.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_askreddit.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: reddit.f_askreddit_10224.link_function
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_askreddit_10224.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_askreddit_10224.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: reddit.f_news_comments.link_function
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_news_comments.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_news_comments.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: reddit.f_relationship_advice.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_relationship_advice.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: reddit.f_relationship_advice_25599.link_function
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_relationship_advice_25599.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: reddit.f_relationship_advice_25599.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: reddit.user_marvelsgrantman136.link_function
+      levels: [verify.level2.v1]
+    - task_base: reddit.user_marvelsgrantman136.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: reddit.user_marvelsgrantman136.links_assessment
+      levels: [verify.level3.v1]
+
+  shopping:
+    - task_base: shopping.catalog_product_compare_a.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping.catalog_product_compare_a.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.catalog_product_compare_b.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping.catalog_product_compare_b.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.category_oral_pain_relief.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping.category_oral_pain_relief.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.customer_account.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping.customer_account.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.downloadable_customer_products.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping.downloadable_customer_products.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.home.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping.home.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.product_detail_gingerbread.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping.product_detail_gingerbread.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.product_detail_soccer_storage.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping.product_detail_soccer_storage.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping.sales_order_history.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping.sales_order_history.links_assessment
+      levels: [verify.level3.v1]
+
+  shopping_admin:
+    - task_base: shopping_admin.admin_admin_cache.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_admin_cache.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_admin_dashboard.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_admin_dashboard.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_admin_integration.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_admin_integration.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_admin_notification.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_admin_notification.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_admin_notification_index.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_admin_notification_index.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_admin_system_account.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_admin_system_account.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_inventory_source_index.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_inventory_source_index.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_reports_report_review_product.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_reports_report_review_product.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_reports_report_sales_coupons.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_reports_report_sales_coupons.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_sales_order.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_sales_order.links_assessment
+      levels: [verify.level3.v1]
+    - task_base: shopping_admin.admin_sales_order_status.link_function
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_sales_order_status.link_purpose
+      levels: [verify.level2.v1]
+    - task_base: shopping_admin.admin_sales_order_status.links_assessment
+      levels: [verify.level3.v1]

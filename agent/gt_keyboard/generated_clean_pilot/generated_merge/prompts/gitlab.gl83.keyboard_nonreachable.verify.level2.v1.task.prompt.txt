@@ -1,0 +1,9 @@
+Task: Inspect interactive interface components on the Pipeline Charts page for Accessibility Insights Keyboard navigation.
+
+WCAG reference: WCAG 2.1.1 Keyboard - All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.
+
+Report a WCAG 2.1.1 keyboard reachability issue for each target where the specified target or control cannot be reached by keyboard navigation, cannot be operated with its expected keyboard interaction once reached, or disrupts the expected keyboard path for reaching downstream controls.
+
+Verify keyboard behavior by navigating to and operating the same target or control through observed Tab, Shift+Tab, arrow-key, Enter, Space, Escape, or character-key interaction as relevant. Pointer interaction may be used only to reveal or cross-check the target, not as proof that the target or control itself is keyboard reachable or operable. Do not rely on source-code inspection alone.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

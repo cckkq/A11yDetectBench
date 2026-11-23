@@ -1,0 +1,26 @@
+task_id: shopping_admin.pa48.e1.invalid_date_summary_and_generic_failure_mixed.verify.level2.v1
+instance_id: shopping_admin.pa48.e1.invalid_date_summary_and_generic_failure_mixed
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_errors/generated_clean_pilot/generated/evaluate-rules/shopping_admin.pa48.e1.invalid_date_summary_and_generic_failure_mixed.verify.level2.v1.yaml
+difficulty: level_2_clause_given_location_hidden
+issue_domain: error
+issue_family: error_identification
+wcag_target: WCAG 3.3.1 Error Identification
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+wcag_clause_text: >-
+  If an input error is automatically detected, the item that is in error is identified and
+  the error is described to the user in text.
+modality_policy: unrestricted_detection
+start_url: http://localhost:7780/admin/braintree/report/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: input-error identification paths on this page
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  issues:
+  - selector: verified CSS selector for the field/control path where the issue belongs
+    target: natural-language description of the field/control path where the issue belongs
+    issue_type: error_identification
+    observed_behavior: concise description of the observed error behavior
+    evidence: concrete DOM, interaction, text, or accessibility facts supporting the issue

@@ -1,0 +1,42 @@
+task_id: shopping_admin.admin_admin_integration.link_purpose.verify.level2.v1
+instance_id: shopping_admin.admin_admin_integration.link_purpose
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA75
+  review_status: source_and_live_checked
+page:
+  site: shopping_admin
+  page_name: Integrations
+  start_url: http://localhost:7780/admin/admin/integration/
+scope:
+  issue_family: link_purpose
+  wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  assessment_requirement: L.2 Link Purpose
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping_admin.pa75.lp.integration_reauthorize_without_row_context
+    target:
+      selector: '#integrationGrid_table td.col-activate a'
+      description: the `Reauthorize` link in the Integrations grid Activate column
+      coverage_policy: single
+    criterion:
+      issue_family: link_purpose
+      wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+      assessment_requirement: L.2 Link Purpose
+      wcag:
+        number: 2.4.4
+        name: Link Purpose (In Context)
+        link_name: Link Purpose (In Context)
+        url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+        criterion_text: >-
+          The purpose of each link can be determined from the link text alone or from the
+          link text together with its programmatically determined link context, except where
+          the purpose of the link would be ambiguous to users in general.
+    evidence_rule: >-
+      The matched link has accessible name `Reauthorize` and no programmatic integration-row
+      context. Its `title` repeats the same action text, the Activate cell does not identify
+      the integration, and the `Magento Analytics user` text is ordinary sibling-cell text
+      without `headers`, row-header, or ARIA association.

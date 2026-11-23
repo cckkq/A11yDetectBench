@@ -1,0 +1,36 @@
+task_id: gitlab.gl24.lp.help_topic_links_have_specific_purpose.verify.v1
+instance_id: gitlab.gl24.lp.help_topic_links_have_specific_purpose
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL24
+  matched_positive: gitlab.gl24.lp.empty_markdown_heading_permalink_anchor_without_name
+page:
+  site: gitlab
+  page_name: Help
+  start_url: http://localhost:8023/help
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  target:
+    selector: main#content-body .md a:not(.anchor)
+    description: the visible documentation topic links in the GitLab Help markdown content
+    coverage_policy: representative_group
+  criterion:
+    issue_family: link_purpose
+    wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+    assessment_requirement: L.2 Link Purpose
+    wcag:
+      number: 2.4.4
+      name: Link Purpose (In Context)
+      link_name: Link Purpose (In Context)
+      url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+      criterion_text: >-
+        The purpose of each link can be determined from the link text alone or from the link
+        text together with its programmatically determined link context, except where the
+        purpose of the link would be ambiguous to users in general.
+  evidence_rule: >-
+    The matched anchor elements have specific visible names such as `Use GitLab`, `Administer
+    GitLab`, and `Two-factor authentication`, with hrefs pointing to the corresponding help
+    or documentation pages. The link text identifies each target topic, so the Link Purpose
+    issue is not present for this target.

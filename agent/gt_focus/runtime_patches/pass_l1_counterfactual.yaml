@@ -1,0 +1,110 @@
+version: 1
+scope: focus_pass_l1_counterfactual
+patches:
+  gitlab.gl01.f21t3.project_initial_avatar_links_no_visible_focus:
+    kind: visible_focus_style
+    selector: .projects-list a.project
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  gitlab.gl01.f21t4.explore_tab_controls_no_visible_focus:
+    kind: visible_focus_style
+    selector: a.shortcuts-activity.nav-link[href="/dashboard/projects"]
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  gitlab.gl02.f21t3.project_initial_avatar_links_no_visible_focus:
+    kind: visible_focus_style
+    selector: .projects-list a.project
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  gitlab.gl96.f21t4.explore_tab_controls_no_visible_focus:
+    kind: visible_focus_style
+    selector: a.nav-link.gl-tab-nav-item[href="/explore/projects/topics"]
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping.p16.f21t10.header_menu_expanded_item_no_visible_focus:
+    kind: composite_active_item_style
+    selector: nav.navigation ul#ui-id-1[role="menu"] a[role="menuitem"]
+    owner_selector: nav.navigation ul#ui-id-1[role="menu"]
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping.p29.f21t10.header_menu_expanded_item_no_visible_focus:
+    kind: composite_active_item_style
+    selector: nav.navigation ul#ui-id-1[role="menu"] a[role="menuitem"]
+    owner_selector: nav.navigation ul#ui-id-1[role="menu"]
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa02.f21t6a.grid_small_selectors_no_visible_focus:
+    kind: focus_within_proxy_style
+    selector: '#notificationGrid_massaction-mass-select'
+    proxy_selector: .mass-select-wrap
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa04.f21t6a.grid_small_selectors_no_visible_focus:
+    kind: visible_focus_style
+    selector: .admin__data-grid-filters-current button.action-remove
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa08.f21t1.datepicker_trigger_no_visible_focus:
+    kind: visible_focus_style
+    selector: button.ui-datepicker-trigger
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa10.f25t1.split_button_revealed_menu_no_focus_shift:
+    kind: revealed_content_focus_shift
+    trigger_selector: .page-actions button.action-toggle.primary.add
+    revealed_selector: .page-actions .actions-split.active ul.dropdown-menu, .page-actions .actions-split._active ul.dropdown-menu, .page-actions .action-menu, .page-actions ul[role="menu"]
+    focus_target_selector: .page-actions .actions-split.active ul.dropdown-menu .item, .page-actions .actions-split._active ul.dropdown-menu .item, .page-actions .action-menu .item, .page-actions ul[role="menu"] .item, .page-actions .actions-split.active ul.dropdown-menu a, .page-actions .actions-split.active ul.dropdown-menu button, .page-actions .actions-split._active ul.dropdown-menu a, .page-actions .actions-split._active ul.dropdown-menu button, .page-actions .action-menu a, .page-actions .action-menu button, .page-actions ul[role="menu"] a, .page-actions ul[role="menu"] button
+    activation_keys:
+      - Enter
+      - Space
+      - ArrowDown
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa15.f21t1.datepicker_trigger_no_visible_focus:
+    kind: visible_focus_style
+    selector: button.ui-datepicker-trigger
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa15.f21t6b.admin_action_buttons_no_visible_focus:
+    kind: visible_focus_style
+    selector: button#apply_rules
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa27.f21t6c.filter_dropdown_subcontrols_no_visible_focus:
+    kind: focus_within_proxy_style
+    selector: .admin__data-grid-filters > .admin__form-field:nth-child(8) .admin__action-multiselect-wrap, .admin__data-grid-filters > .admin__form-field:nth-child(11) .admin__action-multiselect-wrap, .admin__data-grid-filters > .admin__form-field:nth-child(12) .admin__action-multiselect-wrap
+    proxy_selector: .admin__data-grid-filters > .admin__form-field:nth-child(8) .admin__action-multiselect-wrap, .admin__data-grid-filters > .admin__form-field:nth-child(11) .admin__action-multiselect-wrap, .admin__data-grid-filters > .admin__form-field:nth-child(12) .admin__action-multiselect-wrap
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa58.f21t6b.admin_action_buttons_no_visible_focus:
+    kind: visible_focus_style
+    selector: button#add_store, button#add_group
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa62.f21t6c.filter_dropdown_subcontrols_no_visible_focus:
+    kind: focus_within_proxy_style
+    selector: .admin__data-grid-filters > .admin__form-field:nth-child(5) .admin__action-multiselect-wrap, .admin__data-grid-filters > .admin__form-field:nth-child(7) .admin__action-multiselect-wrap
+    proxy_selector: .admin__data-grid-filters > .admin__form-field:nth-child(5) .admin__action-multiselect-wrap, .admin__data-grid-filters > .admin__form-field:nth-child(7) .admin__action-multiselect-wrap
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)
+  shopping_admin.pa75.f21t6b.admin_action_buttons_no_visible_focus:
+    kind: visible_focus_style
+    selector: button#edit.action.edit, button#delete.action.delete
+    outline: '4px solid #d946ef'
+    outline_offset: 3px
+    box_shadow: 0 0 0 6px rgba(217,70,239,.28)

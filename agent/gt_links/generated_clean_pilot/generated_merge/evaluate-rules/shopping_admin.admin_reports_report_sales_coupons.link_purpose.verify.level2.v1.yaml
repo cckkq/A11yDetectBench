@@ -1,0 +1,41 @@
+task_id: shopping_admin.admin_reports_report_sales_coupons.link_purpose.verify.level2.v1
+instance_id: shopping_admin.admin_reports_report_sales_coupons.link_purpose
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA46
+  review_status: source_and_live_checked
+page:
+  site: shopping_admin
+  page_name: Coupons Report
+  start_url: http://localhost:7780/admin/reports/report_sales/coupons/
+scope:
+  issue_family: link_purpose
+  wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  assessment_requirement: L.2 Link Purpose
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping_admin.pa46.lp.tooltip_help_what_is_this_without_target_context
+    target:
+      selector: main#anchor-content a.admin__field-tooltip-action.action-help
+      description: the `What is this?` help link in the Coupons Report store-view switcher
+      coverage_policy: single
+    criterion:
+      issue_family: link_purpose
+      wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+      assessment_requirement: L.2 Link Purpose
+      wcag:
+        number: 2.4.4
+        name: Link Purpose (In Context)
+        link_name: Link Purpose (In Context)
+        url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+        criterion_text: >-
+          The purpose of each link can be determined from the link text alone or from the
+          link text together with its programmatically determined link context, except where
+          the purpose of the link would be ambiguous to users in general.
+    evidence_rule: >-
+      The matched link has computed AX name `What is this?` and no description. Its title
+      repeats the same generic text, and the surrounding tooltip container does not programmatically
+      identify the scope or control that the help link explains.

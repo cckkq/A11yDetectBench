@@ -1,0 +1,11 @@
+Task: Inspect the Submissions sort toggle in the Reddit forums page navigation for Accessibility Insights On input.
+
+Target selector: `button[aria-label="Sort by: Submissions"]`
+
+WCAG reference: WCAG 3.2.2 On Input - Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.
+
+Report a WCAG 3.2.2 on-input context-change issue only if changing the target control value or selection automatically causes a change of context without prior user advice and without a separate confirmation step.
+
+Verify keyboard behavior by navigating to and operating the same target or control through observed Tab, Shift+Tab, arrow-key, Enter, Space, Escape, or character-key interaction as relevant. Pointer interaction may be used only to reveal or cross-check the target, not as proof that the target or control itself is keyboard reachable or operable. Do not rely on source-code inspection alone.
+
+If the issue is present, use verdict `issue_found`; otherwise use verdict `no_issue_found`.

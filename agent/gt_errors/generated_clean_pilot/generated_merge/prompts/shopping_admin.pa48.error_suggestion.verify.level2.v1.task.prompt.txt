@@ -1,0 +1,9 @@
+Task: Inspect input-error suggestion paths on the Braintree Settlement Report page for WCAG 3.3.3 Error Suggestion.
+
+WCAG criterion: If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.
+
+Report a WCAG 3.3.3 error-suggestion issue for each target path where the target path has an automatically detected input error and the page does not provide an actionable correction suggestion.
+
+Do not report the rendered status/error/progress message node, or the submit button when the issue belongs to a field/control.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

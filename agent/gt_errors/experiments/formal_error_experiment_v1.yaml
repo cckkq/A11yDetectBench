@@ -1,0 +1,46 @@
+experiment_id: formal_error_experiment_v1
+description: Error GT formal experiment set with unified max_steps=25 and repeats=3.
+
+defaults:
+  task_root: agent/gt_errors/generated_clean_pilot/generated/tasks
+  levels:
+    - verify.v1
+    - verify.level2.v1
+    - verify.level3.v1
+  max_steps: 25
+  repeats: 3
+
+sites:
+  gitlab:
+    - task_base: gitlab.gl11.e2.rule_violation_without_actionable_suggestion
+    - task_base: gitlab.gl11.e4.field_level_error_text_without_live_semantics
+    - task_base: gitlab.gl16.e2.rule_violation_without_actionable_suggestion
+    - task_base: gitlab.gl44.e4.gitlab_source_url_error_text_without_live_semantics
+    - task_base: gitlab.gl44.e4.personal_access_token_error_text_without_live_semantics
+    - task_base: gitlab.gl70.e4.status_text_change_without_live_semantics
+
+  reddit:
+    - task_base: reddit.ex01.e2.generic_rejection_without_guidance
+    - task_base: reddit.ex02.e1.generic_message_not_field_specific
+    - task_base: reddit.rd11.e1.generic_message_not_field_specific
+    - task_base: reddit.rd11.e2.generic_rejection_without_guidance
+
+  shopping:
+    - task_base: shopping.p01.e4.shared_footer_newsletter_error_without_live_semantics
+    - task_base: shopping.p06.e4.page_local_error_message_without_live_semantics
+    - task_base: shopping.p07.e4.shared_footer_newsletter_error_without_live_semantics
+    - task_base: shopping.p15.e4.page_local_error_message_without_live_semantics
+
+  shopping_admin:
+    - task_base: shopping_admin.pa03.e4.magento_admin_status_message_without_live_semantics
+    - task_base: shopping_admin.pa04.e2.invalid_date_without_expected_format
+    - task_base: shopping_admin.pa06.e2.invalid_date_without_expected_format
+    - task_base: shopping_admin.pa19.e4.progress_scene_without_live_semantics
+    - task_base: shopping_admin.pa20.e4.progress_scene_without_live_semantics
+    - task_base: shopping_admin.pa41.e1.invalid_input_degrades_to_page_level_failure
+    - task_base: shopping_admin.pa41.e2.invalid_input_degrades_to_page_level_failure
+    - task_base: shopping_admin.pa48.e1.invalid_date_summary_and_generic_failure_mixed
+    - task_base: shopping_admin.pa48.e2.invalid_date_summary_and_generic_failure_mixed
+    - task_base: shopping_admin.pa52.e2.invalid_input_degrades_to_page_level_failure
+    - task_base: shopping_admin.pa53.e1.invalid_input_degrades_to_page_level_failure
+    - task_base: shopping_admin.pa66.e4.magento_admin_status_message_without_live_semantics

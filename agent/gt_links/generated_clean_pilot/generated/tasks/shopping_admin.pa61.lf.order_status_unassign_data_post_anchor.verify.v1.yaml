@@ -1,0 +1,40 @@
+task_id: shopping_admin.pa61.lf.order_status_unassign_data_post_anchor.verify.v1
+instance_id: shopping_admin.pa61.lf.order_status_unassign_data_post_anchor
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_links/generated_clean_pilot/generated/evaluate-rules/shopping_admin.pa61.lf.order_status_unassign_data_post_anchor.verify.shared.v1.yaml
+difficulty: level_1_direct_verification
+issue_domain: links
+issue_family: link_function
+wcag_target: WCAG 4.1.2 Name, Role, Value
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
+wcag_clause_text: >-
+  For all user interface components, the name and role can be programmatically determined;
+  states, properties, and values that can be set by the user can be programmatically set;
+  and notification of changes to these items is available to user agents, including assistive
+  technologies.
+ai_web:
+  requirement_key: linkFunction
+  requirement_name: Link function
+  guidance_link_key: WCAG_4_1_2
+  source_files:
+  - accessibility-insights-web-main/src/assessments/links/test-steps/link-function.tsx
+  - accessibility-insights-web-main/src/content/test/links/link-function.tsx
+  - accessibility-insights-web-main/src/content/guideline-metadata.ts
+  requirement_text: >-
+    Links must navigate to another page, location, or resource. Controls that perform an action
+    or change local state must not be exposed as ordinary links.
+modality_policy: unrestricted_detection
+start_url: http://localhost:7780/admin/sales/order_status/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: the Unassign command anchors in the order status grid
+setup: Do not complete confirmation dialogs or submit changes.
+output_format:
+  verdict: issue_found | no_issue_found
+  selector: verified CSS selector for the reported anchor, or empty string
+  target: natural-language target description
+  issue_type: link_function
+  observed_behavior: concise description of the observed link behavior or accessible-name/context
+    problem
+  evidence: concrete DOM, AX, or interaction facts supporting the issue
+target_selector: a[href="#"][data-post*="unassign"]

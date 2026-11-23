@@ -1,0 +1,29 @@
+task_id: shopping_admin.pa41.e1.invalid_input_degrades_to_page_level_failure.verify.v1
+instance_id: shopping_admin.pa41.e1.invalid_input_degrades_to_page_level_failure
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_errors/generated_clean_pilot/generated_pass/evaluate-rules/shopping_admin.pa41.e1.invalid_input_degrades_to_page_level_failure.verify.shared.v1.yaml
+difficulty: level_1_direct_verification
+issue_domain: error
+issue_family: error_identification
+wcag_target: WCAG 3.3.1 Error Identification
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+wcag_clause_text: >-
+  If an input error is automatically detected, the item that is in error is identified and
+  the error is described to the user in text.
+modality_policy: unrestricted_detection
+start_url: http://localhost:7780/admin/reports/report_sales/sales/
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: the From and To date inputs in the Magento Admin Sales Orders Report form
+probe: >-
+  Enter `abc` in the target From field, enter `13/99/9999` in the target To field, and choose
+  Show Report.
+setup: null
+output_format:
+  verdict: issue_found | no_issue_found
+  selector: verified CSS selector for the field/control path where the issue belongs
+  target: natural-language description of the field/control path where the issue belongs
+  issue_type: error_identification
+  observed_behavior: concise description of the observed error behavior
+  evidence: concrete DOM, interaction, text, or accessibility facts supporting the verdict
+target_selector: input#sales_report_from[name="from"], input#sales_report_to[name="to"]

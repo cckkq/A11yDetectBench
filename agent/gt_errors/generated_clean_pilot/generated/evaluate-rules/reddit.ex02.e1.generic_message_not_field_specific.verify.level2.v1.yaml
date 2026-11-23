@@ -1,0 +1,44 @@
+task_id: reddit.ex02.e1.generic_message_not_field_specific.verify.level2.v1
+instance_id: reddit.ex02.e1.generic_message_not_field_specific
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: EX02
+page:
+  site: reddit
+  page_name: Registration
+  start_url: http://localhost:9999/registration
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issue_type:
+  - WCAG 3.3.1 Error Identification
+  - error.e1.generic_message_not_field_specific
+  target:
+    selector: >-
+      input#user_password_first[name="user[password][first]"], input#user_password_second[name="user[password][second]"]
+    description: the password and repeat password inputs in the Reddit registration form
+    coverage_policy: representative_group
+  criterion:
+    issue_family: error_identification
+    wcag_target: WCAG 3.3.1 Error Identification
+    assessment_requirement: E.1 Error Identification
+    wcag:
+      number: 3.3.1
+      name: Error Identification
+      link_name: WCAG 3.3.1
+      url: https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html
+      criterion_text: >-
+        If an input error is automatically detected, the item that is in error is identified
+        and the error is described to the user in text.
+  evidence_rule: >-
+    The page detects the password mismatch but the visible error feedback does not identify
+    the password-confirmation mismatch, does not describe which target field or field relation
+    is invalid, and remains a generic invalid-value message.
+evaluation_logic:
+- Verdict must be exactly correct.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- Behavior may use different wording, but it must satisfy the gold evidence rule.
+- Reporting unrelated issues does not count for this task.

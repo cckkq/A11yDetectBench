@@ -1,0 +1,54 @@
+task_id: shopping_admin.pa62.visible_focus.verify.level2.v1
+instance_id: shopping_admin.pa62.visible_focus
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA62
+  review_status: current_clean_inventory
+page:
+  site: shopping_admin
+  page_name: Sources
+  start_url: http://localhost:7780/admin/inventory/source/index/
+scope:
+  issue_family: visible_focus
+  wcag_target: WCAG 2.4.7 Focus Visible
+  assessment_requirement: F.1 Visible Focus
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping_admin.pa62.f21t6c.filter_dropdown_subcontrols_no_visible_focus
+    target:
+      selector: >-
+        .admin__data-grid-filters > .admin__form-field:nth-child(5) .admin__action-multiselect-wrap,
+        .admin__data-grid-filters > .admin__form-field:nth-child(7) .admin__action-multiselect-wrap
+      description: >-
+        the Is Enabled and Pickup Location subcontrols inside the expanded Filter panel of
+        the Sources grid
+      coverage_policy: representative_group
+    criterion:
+      issue_family: visible_focus
+      wcag_target: WCAG 2.4.7 Focus Visible
+      assessment_requirement: F.1 Visible Focus
+      ai_web:
+        requirement_key: visible-focus
+        requirement_name: Visible focus
+        guidance_link_key: WCAG_2_4_7
+        source_files:
+        - >-
+          accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/visible-focus.tsx
+        - accessibility-insights-web-main/src/content/test/focus/visible-focus.tsx
+        - accessibility-insights-web-main/src/content/guideline-metadata.ts
+        requirement_text: Components must provide a visible indication when they have the
+          input focus.
+      wcag:
+        number: 2.4.7
+        name: Focus Visible
+        link_name: WCAG 2.4.7
+        url: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
+        criterion_text: >-
+          Any keyboard operable user interface has a mode of operation where the keyboard
+          focus indicator is visible.
+    evidence_rule: >-
+      The Is Enabled and Pickup Location filter subcontrols receive keyboard focus, but no
+      user-perceivable focus indicator is visible while one is keyboard-focused.

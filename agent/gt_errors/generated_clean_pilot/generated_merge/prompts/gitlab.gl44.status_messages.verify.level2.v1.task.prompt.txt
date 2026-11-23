@@ -1,0 +1,9 @@
+Task: Inspect interactions that trigger same-page error or status messages on the New Group Import Group Pane page for WCAG 4.1.3 Status Messages.
+
+WCAG criterion: In content implemented using markup languages, status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus.
+
+Report a WCAG 4.1.3 status-messages issue for each target interaction where the target interaction triggers an active same-page status message and that message is not programmatically exposed through role, aria-live, or equivalent status-message semantics.
+
+Do not report the rendered status/error/progress message node, or the submit button when the issue belongs to a field/control.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.

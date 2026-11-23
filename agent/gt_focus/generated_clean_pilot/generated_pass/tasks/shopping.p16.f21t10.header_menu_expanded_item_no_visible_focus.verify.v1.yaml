@@ -1,0 +1,41 @@
+task_id: shopping.p16.f21t10.header_menu_expanded_item_no_visible_focus.verify.v1
+instance_id: shopping.p16.f21t10.header_menu_expanded_item_no_visible_focus
+task_type: verification
+evaluate_rule_file: >-
+  agent/gt_focus/generated_clean_pilot/generated_pass/evaluate-rules/shopping.p16.f21t10.header_menu_expanded_item_no_visible_focus.verify.shared.v1.yaml
+difficulty: level_1_direct_verification
+issue_domain: focus
+issue_family: visible_focus
+wcag_target: WCAG 2.4.7 Focus Visible
+wcag_source_url: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
+wcag_clause_text: >-
+  Any keyboard operable user interface has a mode of operation where the keyboard focus indicator
+  is visible.
+ai_web:
+  requirement_key: visible-focus
+  requirement_name: Visible focus
+  guidance_link_key: WCAG_2_4_7
+  source_files:
+  - >-
+    accessibility-insights-web-main/src/assessments/visible-focus-order/test-steps/visible-focus.tsx
+  - accessibility-insights-web-main/src/content/test/focus/visible-focus.tsx
+  - accessibility-insights-web-main/src/content/guideline-metadata.ts
+  requirement_text: Components must provide a visible indication when they have the input
+    focus.
+modality_policy: keyboard_primary_pointer_confirmation
+start_url: http://localhost:7770/beauty-personal-care/oral-care/toothbrushes-accessories.html
+auth_state_file: runtime_auth_state_placeholder.json
+target_description: the Skin Care submenu item in the Shopping header mega-menu
+setup: >-
+  Prepare the header mega-menu expanded state with Beauty & Personal Care open and the Skin
+  Care submenu item exposed for assessment.
+output_format:
+  verdict: issue_found | no_issue_found
+  selector: verified CSS selector for the focused or revealing-content target, or empty string
+  target: natural-language target description
+  issue_type: visible_focus
+  observed_behavior: concise description of the observed keyboard focus behavior
+  evidence: >-
+    concrete keyboard path, rendered focus state, DOM, or accessibility facts supporting the
+    verdict
+target_selector: nav.navigation a[role="menuitem"][href$="/beauty-personal-care/skin-care.html"]

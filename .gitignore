@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+runs/
+runs_*/
+auth/
+.conv/
+*.storage_state.json
+runtime_auth_state_placeholder.json
+outputs/

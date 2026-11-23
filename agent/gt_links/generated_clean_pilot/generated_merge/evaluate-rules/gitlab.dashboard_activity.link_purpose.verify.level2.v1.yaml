@@ -1,0 +1,42 @@
+task_id: gitlab.dashboard_activity.link_purpose.verify.level2.v1
+instance_id: gitlab.dashboard_activity.link_purpose
+task_level: level2
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL50
+  review_status: source_and_live_checked
+page:
+  site: gitlab
+  page_name: Dashboard Activity
+  start_url: http://localhost:8023/dashboard/activity
+scope:
+  issue_family: link_purpose
+  wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+  assessment_requirement: L.2 Link Purpose
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: gitlab.gl50.lp.dashboard_activity_rss_subscribe_anchor_without_target_context
+    target:
+      selector: >-
+        main#content-body a[title='Subscribe'][href*='.atom'], main#content-body a[aria-label='Subscribe'][href*='.atom']
+      description: the `Subscribe` RSS feed anchor element on the dashboard activity page
+      coverage_policy: single
+    criterion:
+      issue_family: link_purpose
+      wcag_target: WCAG 2.4.4 Link Purpose (In Context)
+      assessment_requirement: L.2 Link Purpose
+      wcag:
+        number: 2.4.4
+        name: Link Purpose (In Context)
+        link_name: Link Purpose (In Context)
+        url: https://www.w3.org/TR/WCAG21/#link-purpose-in-context
+        criterion_text: >-
+          The purpose of each link can be determined from the link text alone or from the
+          link text together with its programmatically determined link context, except where
+          the purpose of the link would be ambiguous to users in general.
+    evidence_rule: >-
+      The matched link has computed name `Subscribe` and no description beyond the same generic
+      name. The name does not identify that the link subscribes to the dashboard activity
+      feed.

@@ -1,0 +1,68 @@
+{
+  "scope": {
+    "category": "Focus",
+    "task_family": "L1-PASS / reviewed no-issue controls",
+    "paper_table": "Table III correct no-issue rate",
+    "models": [
+      "GPT-5.2",
+      "GPT-5.5",
+      "Kimi-K2.6"
+    ],
+    "denominator_per_model": 48
+  },
+  "manual_adjudication_rule": {
+    "applies_only_to": "Focus L1-PASS false alarms where raw evaluation observed issue_found on expected no_issue_found",
+    "manual_correct_if_all_true": [
+      "evaluation.json selector_match == true",
+      "evaluation.json issue_type_match == true",
+      "evaluation.json extra_issue_indices is empty",
+      "final-response.json or history.json contains explicit repair leakage evidence, such as wa-kf-*, injected/helper/browser-extension style, not native page styling, or removal/discounting of the injected repair marker"
+    ],
+    "otherwise": "retain as false alarm; do not infer GT leak or correct without explicit repair-leakage evidence",
+    "raw_eval_policy": "Do not edit raw evaluation.json. Store manual result only in this sidecar and notes/paper caption."
+  },
+  "final_table3_focus_summary": {
+    "gpt52": {
+      "den": 48,
+      "mechanical_raw": {
+        "correct_no_issue": 42,
+        "rate": 0.875
+      },
+      "manual_leakage_correctable": 6,
+      "retained_false_alarms": 0,
+      "missing": 0,
+      "table3_correct_no_issue": {
+        "count": 48,
+        "rate": 1.0
+      }
+    },
+    "gpt55": {
+      "den": 48,
+      "mechanical_raw": {
+        "correct_no_issue": 26,
+        "rate": 0.5416666666666666
+      },
+      "manual_leakage_correctable": 21,
+      "retained_false_alarms": 1,
+      "missing": 0,
+      "table3_correct_no_issue": {
+        "count": 47,
+        "rate": 0.9791666666666666
+      }
+    },
+    "kimi26": {
+      "den": 48,
+      "mechanical_raw_after_supplement": {
+        "correct_no_issue": 26,
+        "rate": 0.5416666666666666
+      },
+      "manual_leakage_correctable_after_supplement": 7,
+      "retained_false_alarms_after_supplement": 15,
+      "missing_after_supplement": 0,
+      "table3_correct_no_issue": {
+        "count": 33,
+        "rate": 0.6875
+      }
+    }
+  }
+}

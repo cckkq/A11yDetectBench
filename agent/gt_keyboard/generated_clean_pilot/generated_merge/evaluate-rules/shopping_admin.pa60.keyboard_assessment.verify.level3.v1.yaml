@@ -1,0 +1,52 @@
+task_id: shopping_admin.pa60.keyboard_assessment.verify.level3.v1
+instance_id: shopping_admin.pa60.keyboard_assessment
+task_level: level3
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA60
+  review_status: current_clean_inventory
+page:
+  site: shopping_admin
+  page_name: Checkout Agreements
+  start_url: http://localhost:7780/admin/checkout/agreement/
+scope:
+  assessment_scope: Keyboard assessment scope 1.1, 1.2, 1.3, 1.4, and 1.6
+gold:
+  issue_present: true
+  expected_verdict: issue_found
+  issues:
+  - issue_id: shopping_admin.pa60.page_limit_context_change
+    target:
+      selector: select#agreementGrid_page-limit
+      description: the checkout agreements grid page-limit selector
+      coverage_policy: single
+    criterion:
+      issue_family: on_input
+      wcag_target: WCAG 3.2.2 On Input
+      assessment_requirement: 1.4 On input
+      ai_web:
+        requirement_key: on-input
+        requirement_name: On input
+        guidance_link_key: WCAG_3_2_2
+        source_files:
+        - >-
+          accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/on-input.tsx
+        - accessibility-insights-web-main/src/content/test/keyboard/on-input.tsx
+        - accessibility-insights-web-main/src/content/guideline-metadata.ts
+        requirement_text: >-
+          Changing a user interface component setting must not automatically cause a context
+          change unless users are advised before using the component.
+      wcag:
+        number: 3.2.2
+        name: On Input
+        link_name: WCAG 3.2.2
+        url: https://www.w3.org/WAI/WCAG21/Understanding/on-input.html
+        criterion_text: >-
+          Changing the setting of any user interface component does not automatically cause
+          a change of context unless the user has been advised of the behavior before using
+          the component.
+    evidence_rule: >-
+      The target control (the checkout agreements grid page-limit selector) changes page context,
+      navigation state, result ordering, or equivalent page state immediately after the control
+      value or selection changes, without a separate submit or apply action and without prior
+      warning. Merely opening a menu is not sufficient.

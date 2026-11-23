@@ -1,0 +1,58 @@
+task_id: shopping_admin.pa60.page_limit_context_change.verify.v1
+instance_id: shopping_admin.pa60.page_limit_context_change
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: PA60
+  matched_positive: shopping_admin.pa60.page_limit_context_change
+page:
+  site: shopping_admin
+  page_name: Checkout Agreements
+  start_url: http://localhost:7780/admin/checkout/agreement/
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 3.2.2 On Input
+  - keyboard.on_input.native_select_change_triggers_context_change
+  target:
+    selector: select#agreementGrid_page-limit
+    description: the checkout agreements grid page-limit selector
+    coverage_policy: single
+  criterion:
+    issue_family: on_input
+    wcag_target: WCAG 3.2.2 On Input
+    assessment_requirement: 1.4 On input
+    ai_web:
+      requirement_key: on-input
+      requirement_name: On input
+      guidance_link_key: WCAG_3_2_2
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/on-input.tsx
+      - accessibility-insights-web-main/src/content/test/keyboard/on-input.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: >-
+        Changing a user interface component setting must not automatically cause a context
+        change unless users are advised before using the component.
+    wcag:
+      number: 3.2.2
+      name: On Input
+      link_name: WCAG 3.2.2
+      url: https://www.w3.org/WAI/WCAG21/Understanding/on-input.html
+      criterion_text: >-
+        Changing the setting of any user interface component does not automatically cause
+        a change of context unless the user has been advised of the behavior before using
+        the component.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target: the runtime patch is expected to remove
+    the reviewed keyboard failure while keeping the same page, setup, target selector, and
+    criterion. A reported keyboard issue on this matched clean target is a false alarm for
+    this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported keyboard issue on this clean target is a false alarm for this task.
+- Reporting unrelated keyboard issues does not count for this task.

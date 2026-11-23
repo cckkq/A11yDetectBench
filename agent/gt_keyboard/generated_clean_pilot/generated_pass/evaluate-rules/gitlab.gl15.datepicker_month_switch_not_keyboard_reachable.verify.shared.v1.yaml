@@ -1,0 +1,59 @@
+task_id: gitlab.gl15.datepicker_month_switch_not_keyboard_reachable.verify.v1
+instance_id: gitlab.gl15.datepicker_month_switch_not_keyboard_reachable
+task_level: level1
+source:
+  record_file: redacted_source_record_for_double_anonymous_review
+  page_id: GL15
+  matched_positive: gitlab.gl15.datepicker_month_switch_not_keyboard_reachable
+page:
+  site: gitlab
+  page_name: Personal Access Tokens
+  start_url: http://localhost:8023/-/profile/personal_access_tokens
+gold:
+  issue_present: false
+  expected_verdict: no_issue_found
+  issue_type:
+  - WCAG 2.1.1 Keyboard
+  - keyboard.keyboard_nonreachable.datepicker_month_switch_not_keyboard_reachable
+  target:
+    selector: .pika-single .pika-prev, .pika-single .pika-next
+    description: >-
+      the previous and next month buttons in the opened personal access token expiration datepicker
+    coverage_policy: representative_group
+  criterion:
+    issue_family: keyboard_nonreachable
+    wcag_target: WCAG 2.1.1 Keyboard
+    assessment_requirement: 1.1 Keyboard navigation
+    ai_web:
+      requirement_key: keyboard-navigation
+      requirement_name: Keyboard navigation
+      guidance_link_key: WCAG_2_1_1
+      source_files:
+      - >-
+        accessibility-insights-web-main/src/assessments/keyboard-interaction/test-steps/keyboard-navigation.tsx
+      - accessibility-insights-web-main/src/content/test/keyboard/keyboard-navigation.tsx
+      - accessibility-insights-web-main/src/content/guideline-metadata.ts
+      requirement_text: Users must be able to navigate to all interactive interface components
+        using a keyboard.
+    wcag:
+      number: 2.1.1
+      name: Keyboard
+      link_name: WCAG 2.1.1
+      url: https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html
+      criterion_text: >-
+        All functionality of the content is operable through a keyboard interface without
+        requiring specific timings for individual keystrokes, except where the underlying
+        function requires input that depends on the path of the user's movement and not just
+        the endpoints.
+  evidence_rule: >-
+    Counterfactual PASS L1 for the matched BASE target: the runtime patch is expected to remove
+    the reviewed keyboard failure while keeping the same page, setup, target selector, and
+    criterion. A reported keyboard issue on this matched clean target is a false alarm for
+    this task.
+evaluation_logic:
+- Verdict must be exactly no_issue_found for the matched PASS target.
+- >-
+  Target may use a different locator, but it must resolve to the same DOM or accessibility
+  target as the gold selector.
+- A reported keyboard issue on this clean target is a false alarm for this task.
+- Reporting unrelated keyboard issues does not count for this task.

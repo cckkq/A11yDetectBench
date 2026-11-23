@@ -1,0 +1,9 @@
+Task: Inspect any anchor on this page for WCAG 2.4.4 Link Purpose (In Context).
+
+WCAG criterion: The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.
+
+Do not complete confirmation dialogs or submit changes.
+
+Report a WCAG 2.4.4 link-purpose issue for each anchor element where that anchor element's purpose cannot be determined from its accessible name alone or from its accessible name together with programmatically determined link context.
+
+Report only issues that are present. If no issues are present, use verdict `no_issue_found` and leave the `issues` list empty.
